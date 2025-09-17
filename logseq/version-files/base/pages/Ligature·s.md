@@ -1,0 +1,3 @@
+Alias:: ligature, ligatures, ligaturer, ligaturé·s·e·es, ligaturés, ligaturée, ligaturées, ligaturés·es, ligaturé·e,
+
+- ...

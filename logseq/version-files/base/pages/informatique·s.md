@@ -1,0 +1,3 @@
+Alias:: informatique, informatiques,
+
+-

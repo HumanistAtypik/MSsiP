@@ -1,0 +1,170 @@
+{:blocks (
+{:block/content "{ [[{Système·s}]] ={{[[{Réseau·x}]]><{Modèle·s}}><{{Modèle·s><{Réseau·x}}}}\n{Modèle·s} = {Méta-onto-nomie·s}"
+:block/format :markdown
+:block/left 
+{:block/uuid #uuid "687aea91-1437-49f3-a498-9ca1635b9c22"}
+:block/parent 
+{:block/uuid #uuid "687aea91-1437-49f3-a498-9ca1635b9c22"}
+:block/properties 
+{}
+:block/uuid #uuid "687aeaba-014a-4f22-bc97-8e4cb91cc18d"} 
+{:block/created-at 1753008436019
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:blockType "B"
+:stroke ""
+:collapsed false
+:borderRadius 8
+:index 0
+:scale [1 1]
+:pageId "687aeaba-014a-4f22-bc97-8e4cb91cc18d"
+:scaleLevel "md"
+:fill ""
+:compact true
+:isAutoResizing true
+:type "logseq-portal"
+:size [400 89]
+:strokeType "line"
+:strokeWidth 2
+:opacity 1
+:id "b564a1f0-6439-11f0-bd8f-790eb6f2bf63"
+:noFill false
+:isLocked false
+:point [168.5 673.5]
+:parentId "687aea91-1437-49f3-a498-9ca1635b9c22"
+:collapsedHeight 0
+:nonce 1752885946772}}
+:block/updated-at 1753008436019} 
+{:block/content "}"
+:block/format :markdown
+:block/left 
+{:block/uuid #uuid "687aeaba-014a-4f22-bc97-8e4cb91cc18d"}
+:block/parent 
+{:block/uuid #uuid "687aea91-1437-49f3-a498-9ca1635b9c22"}
+:block/uuid #uuid "687b8cd5-5b1e-4062-99d3-796780726a9a"} 
+{:block/created-at 1753010029864
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:blockType "P"
+:stroke ""
+:collapsed false
+:borderRadius 8
+:index 1
+:scale [1 1]
+:pageId "Onticité·s"
+:scaleLevel "md"
+:fill ""
+:compact false
+:isAutoResizing true
+:type "logseq-portal"
+:size [600 206]
+:strokeType "line"
+:strokeWidth 2
+:opacity 1
+:id "f548cd60-6555-11f0-bd8f-790eb6f2bf63"
+:noFill false
+:point [400 328]
+:parentId "687aea91-1437-49f3-a498-9ca1635b9c22"
+:collapsedHeight 0
+:nonce 1753008031068}}
+:block/updated-at 1753010029864} 
+{:block/created-at 1753009095541
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:blockType "P"
+:stroke ""
+:collapsed false
+:borderRadius 8
+:index 2
+:scale [1 1]
+:pageId "{Interface·s}"
+:scaleLevel "md"
+:fill ""
+:compact false
+:isAutoResizing true
+:type "logseq-portal"
+:size [400 174]
+:strokeType "line"
+:strokeWidth 2
+:opacity 1
+:id "21b23560-6558-11f0-bd8f-790eb6f2bf63"
+:noFill false
+:point [-120 296]
+:parentId "687aea91-1437-49f3-a498-9ca1635b9c22"
+:collapsedHeight 0
+:nonce 1753008964642}}
+:block/updated-at 1753009095541} 
+{:block/created-at 1753010032698
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:blockType "P"
+:stroke ""
+:collapsed false
+:borderRadius 8
+:index 3
+:scale [1 1]
+:pageId "{Système·s}"
+:scaleLevel "md"
+:fill ""
+:compact false
+:isAutoResizing true
+:type "logseq-portal"
+:size [400 174]
+:strokeType "line"
+:strokeWidth 2
+:opacity 1
+:id "598f5b20-6558-11f0-bd8f-790eb6f2bf63"
+:noFill false
+:point [168 56]
+:parentId "687aea91-1437-49f3-a498-9ca1635b9c22"
+:collapsedHeight 0
+:nonce 1753009058424}}
+:block/updated-at 1753010032698} 
+{:block/created-at 1753011089943
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:blockType "P"
+:stroke ""
+:collapsed false
+:borderRadius 8
+:index 4
+:scale [1 1]
+:pageId "{Modèle·s}"
+:scaleLevel "md"
+:fill ""
+:compact false
+:isAutoResizing true
+:type "logseq-portal"
+:size [400 246]
+:strokeType "line"
+:strokeWidth 2
+:opacity 1
+:id "bddc9fa0-655a-11f0-bd8f-790eb6f2bf63"
+:noFill false
+:point [792 0]
+:parentId "687aea91-1437-49f3-a498-9ca1635b9c22"
+:collapsedHeight 0
+:nonce 1753010085564}}
+:block/updated-at 1753011089943})
+:pages (
+{:block/uuid #uuid "687aea91-1437-49f3-a498-9ca1635b9c22"
+:block/properties 
+{:ls-type :whiteboard-page
+:logseq.tldraw.page 
+{:id "687aea91-1437-49f3-a498-9ca1635b9c22"
+:name "{[[mon]] [[[[[[système]] [[[[sémiotico]]-[[informatique]]]]]] [[personnel]]]]}"
+:bindings 
+{}
+:nonce 1
+:assets []
+:shapes-index ("b564a1f0-6439-11f0-bd8f-790eb6f2bf63" "f548cd60-6555-11f0-bd8f-790eb6f2bf63" "21b23560-6558-11f0-bd8f-790eb6f2bf63" "598f5b20-6558-11f0-bd8f-790eb6f2bf63" "bddc9fa0-655a-11f0-bd8f-790eb6f2bf63")}}
+:block/updated-at 1753011089943
+:block/created-at 1752885905184
+:block/type "whiteboard"
+:block/name "{[[[[mon]] [[[[[[système]] [[[[sémiotico]]-[[informatique]]]]]] [[personnel]]]]]]}"
+:block/original-name "{[[[[Mon]] [[[[[[Système]] [[[[sémiotico]]-[[informatique]]]]]] [[personnel]]]]]]}"})}

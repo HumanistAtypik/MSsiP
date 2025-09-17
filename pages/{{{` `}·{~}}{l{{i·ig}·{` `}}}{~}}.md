@@ -1,0 +1,4 @@
+Alias:: {DÉVELOPPE puis DUPLI-ENCROCHÈTE CHAQUE FORMULE LEXICALEMENT RÉALISABLE}
+
+-
+- {{embed [[Lien·s]]}}

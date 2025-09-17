@@ -1,0 +1,4 @@
+- ![image.png](../assets/image_1751213501038_0.png)
+- [[Commande·s]] [[informatique·s]]
+- électrique > électronique > informatique
+	- [[[[[[électronico]]-[[matériel]]]]·s·le·les]] versus [[[[[[[[[[numérico]]-[[[[[[computationnello]]-[[logiciel]]]]·s·le·s]]]]]]]]·s·le·les]]
