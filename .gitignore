@@ -1,0 +1,7 @@
+# Dossiers de sauvegarde et de corbeille de Logseq
+logseq/bak/
+logseq/.recycle/
+
+# Dossier de cache et de runtime de Logseq
+.logseq/
+
