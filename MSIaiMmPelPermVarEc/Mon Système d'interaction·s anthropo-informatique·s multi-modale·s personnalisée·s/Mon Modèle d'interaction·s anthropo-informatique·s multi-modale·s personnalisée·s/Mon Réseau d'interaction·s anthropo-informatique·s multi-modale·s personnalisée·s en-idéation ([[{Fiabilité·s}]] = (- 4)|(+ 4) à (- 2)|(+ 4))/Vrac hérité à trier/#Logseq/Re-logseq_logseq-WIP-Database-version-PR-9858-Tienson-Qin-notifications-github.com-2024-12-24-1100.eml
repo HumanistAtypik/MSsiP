@@ -1,0 +1,1673 @@
+Received: from AS8PR10MB6922.EURPRD10.PROD.OUTLOOK.COM (2603:10a6:20b:57d::15)
+ by DB9PR10MB7593.EURPRD10.PROD.OUTLOOK.COM with HTTPS; Tue, 24 Dec 2024
+ 10:00:38 +0000
+Received: from DUZP191CA0033.EURP191.PROD.OUTLOOK.COM (2603:10a6:10:4f8::29)
+ by AS8PR10MB6922.EURPRD10.PROD.OUTLOOK.COM (2603:10a6:20b:57d::15) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8293.14; Tue, 24 Dec
+ 2024 10:00:36 +0000
+Received: from DU2PEPF00028D00.eurprd03.prod.outlook.com
+ (2603:10a6:10:4f8:cafe::14) by DUZP191CA0033.outlook.office365.com
+ (2603:10a6:10:4f8::29) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8272.20 via Frontend Transport; Tue,
+ 24 Dec 2024 10:00:36 +0000
+Authentication-Results: spf=pass (sender IP is 192.30.252.207)
+ smtp.mailfrom=github.com; dkim=pass (signature was verified)
+ header.d=github.com;dmarc=pass action=none
+ header.from=github.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of github.com designates
+ 192.30.252.207 as permitted sender) receiver=protection.outlook.com;
+ client-ip=192.30.252.207; helo=out-24.smtp.github.com; pr=C
+Received: from out-24.smtp.github.com (192.30.252.207) by
+ DU2PEPF00028D00.mail.protection.outlook.com (10.167.242.184) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.8293.12
+ via Frontend Transport; Tue, 24 Dec 2024 10:00:36 +0000
+X-IncomingTopHeaderMarker:
+ OriginalChecksum:B2EAB3E4FECC6FD8961CD952118520D3CBF52604B424A43320E70FB5BA42FA47;UpperCasedChecksum:B8091C0C90BC89C5FDC9B4699162FB6BFDC1CDAC94B7303CBD941654321B2657;SizeAsReceived:2059;Count:26
+Received: from github.com (hubbernetes-node-46a8e66.ac4-iad.github.net [10.52.211.14])
+	by smtp.github.com (Postfix) with ESMTPA id C63B4640BB0
+	for <valentinlouisroche@live.fr>; Tue, 24 Dec 2024 02:00:35 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com;
+	s=pf2023; t=1735034435;
+	bh=q5e9/ZDK8JcRF8ZnzVij3ntRfTmRg0g4aTLKMe1UhkA=;
+	h=Date:From:Reply-To:To:Cc:In-Reply-To:References:Subject:List-ID:
+	 List-Archive:List-Post:List-Unsubscribe:List-Unsubscribe-Post:
+	 From;
+	b=dZoyOcsxxXzrXSBSQ+bf3BptlHM6A9GQKFa/uL9LmcfwYrfoi5S5U0woUgsU5DXOE
+	 jU0SGoHVGMHaC0ZJXyQCZbyVI1/O6tKRclnbc0QtxJ7esX0sMA7u3MTtcI02OM5FAe
+	 7/kB2yZYZzy7JvPvZl5CqO57Nm65uiwhJwsotNh4=
+Date: Tue, 24 Dec 2024 02:00:35 -0800
+From: Tienson Qin <notifications@github.com>
+Reply-To: logseq/logseq <noreply@github.com>
+To: logseq/logseq <logseq@noreply.github.com>
+Cc: HumanistAtypik <valentinlouisroche@live.fr>, 
+ Push <push@noreply.github.com>
+Message-ID: <logseq/logseq/pull/9858/before/94d44f0c88aafbbd3bc15bd4d9b8636e7555438e/after/fbefade53111076418598feaa23479b06f3aed50@github.com>
+In-Reply-To: <logseq/logseq/pull/9858@github.com>
+References: <logseq/logseq/pull/9858@github.com>
+Subject: Re: [logseq/logseq] [WIP] Database version (PR #9858)
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_676a8643c36fc_a021fc436cb";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Precedence: list
+X-GitHub-Sender: tiensonqin
+X-GitHub-Recipient: HumanistAtypik
+X-GitHub-Reason: push
+List-ID: logseq/logseq <logseq.logseq.github.com>
+List-Archive: https://github.com/logseq/logseq
+List-Post: <mailto:noreply@github.com>
+List-Unsubscribe: <mailto:unsub+A6UZ77RTOK7LWM22CWLNB7OFOZTUHEVBNHHGXB4MXY@reply.github.com>,
+ <https://github.com/notifications/unsubscribe/one-click/A6UZ77QHVM6YCSGVTFN53PD2HEWEHANCNFSM6AAAAAA2JXJQ3Q>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Auto-Response-Suppress: All
+destinations: valentinlouisroche@live.fr
+X-GitHub-Recipient-Address: valentinlouisroche@live.fr
+X-IncomingHeaderCount: 26
+Return-Path: noreply@github.com
+X-MS-Exchange-Organization-ExpirationStartTime: 24 Dec 2024 10:00:36.7973
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 24ac0393-fbce-4a10-25be-08dd2401d07e
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DU2PEPF00028D00:EE_|AS8PR10MB6922:EE_|DB9PR10MB7593:EE_
+X-MS-Exchange-Organization-AuthSource:
+ DU2PEPF00028D00.eurprd03.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 12/24/2024 9:53:04 AM
+X-MS-Office365-Filtering-Correlation-Id: 24ac0393-fbce-4a10-25be-08dd2401d07e
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 192.30.252.207
+X-SID-PRA: NOTIFICATIONS@GITHUB.COM
+X-SID-Result: PASS
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam:
+ BCL:1;ARA:1444111002|10300799035|9400799030|461199028|8900799020|68400799013|4302099013|3412199025|440099028|1360799030|1370799030|1380799030|56899033|1602099012|2406899039;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 24 Dec 2024 10:00:36.5630
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 24ac0393-fbce-4a10-25be-08dd2401d07e
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource:
+ DU2PEPF00028D00.eurprd03.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: AS8PR10MB6922
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.8045174
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8293.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	wl:1;pcwl:1;ucf:0;jmr:0;ex:0;auth:1;dest:I;OFR:TrustedSenderList;ENG:(5062000308)(920221119095)(90000117)(920221120095)(90012020)(91020020)(91040095)(9050020)(9060121)(9100341)(944500132)(4810010)(4910033)(9930004)(9545005)(10172021)(9439006)(9310011)(9220031)(120001)(1110175);
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0wO0Q9MTtHRD0xO1NDTD0tMQ==
+X-Microsoft-Antispam-Message-Info:
+	=?Windows-1252?Q?gqmdg7yHZ58A149jeeubMuiGvl435wY1/xWZYhbsjJLBBjGoIUhIzg+u?=
+ =?Windows-1252?Q?D6suB2wJOlnGI/VW1fJKjNh4W1UV8ZbxJQb8PY6fqtY6l2RkIGwtP9am?=
+ =?Windows-1252?Q?hxXeEe1vIm3jCQQmMzL12RcJt2J8anmwah1QmcO6Xfa0V/VNPTc0L1pe?=
+ =?Windows-1252?Q?iWYBINyaEO3QulIkJboG3sXthCzyYahc+V96MOVi62q3fkcLsnA7LkAq?=
+ =?Windows-1252?Q?JD0SJYup3cJVPG/LrXwvEeipG44gxmIJBfpuMoeRyB88giUuCYsp7lt0?=
+ =?Windows-1252?Q?AzA0nfyRtF88A6iVkummeIPIurd67i/c1C98jK+2Y+Y1QIOPcow3YzLl?=
+ =?Windows-1252?Q?n49bdAtJhgz0peo1kwJOdMxQIKa3XEr8qK+3HPQ3ceiMzwry4AQuOC9G?=
+ =?Windows-1252?Q?xubVu3JEBHD2OlyKGphFLAkGyqtiJWMNBmGryq6e4XpANIulgrrNCAgN?=
+ =?Windows-1252?Q?ZJYEeXJA8J2+xjxAzdEm54LKMHvghD/s5IWJd1v+xGKBGTYaiKAWnval?=
+ =?Windows-1252?Q?/SPPstyJk9rt5FRquokXHz3/ZGCUDAxCzwliPkjf2tuwyObpdvlwJtGj?=
+ =?Windows-1252?Q?o6TETdt3J5X4p/otaENIjBkym5LYyjGRBeOwU1Huye6+NqUjDrwj41JC?=
+ =?Windows-1252?Q?1mxnGcLCvYkpKod4cV1owFLljVdKagkqb8afy9MtS+V/fPaBwuSZpVQF?=
+ =?Windows-1252?Q?orm30lLiK0PJQ/fQjGg6WoAD5wLoyVjg9aGyuoUp3vtBjxZznQMKhPbz?=
+ =?Windows-1252?Q?6xaCeDLtUeEGDim8oQiyAvVYESRTh+9fFqZVxfTz/oz87N8f+WHJx6a6?=
+ =?Windows-1252?Q?8PThBGPJj9weKCqqZ4VZ/ezeHMUKkRnJxZFZQN3aG9F//9ehclUE/ppP?=
+ =?Windows-1252?Q?r+FFFIGjhGI4kvagcOjc2Po65D1eZmhvYg6F/JtbTP2W/qf5LtWPxFZ0?=
+ =?Windows-1252?Q?idWX3aT7RGW6zuppFGba7HkCEmBOt8feLVND/ToYtRuE3Q7MVm0GDxXy?=
+ =?Windows-1252?Q?JTe83NSPvywkSxgQjPPaSoAelIuYmv74A0T0mvHmlfPwI8KBnWgePS0F?=
+ =?Windows-1252?Q?enzJuYBPImvDnPs7ov2jteE6u/S7LipcH4zWsklNFAbeu2Ko9CNk2Pti?=
+ =?Windows-1252?Q?lXthuEgYHqO7Wc90JE2hFPrVGmWmn8i3qauMY2oSVcx9hat8uFOKFYqu?=
+ =?Windows-1252?Q?Qf83YXYnw9ceuniUHQ77Lk9yC6ev/S6xmFbVeYEjnuOIro5DI93tCsc/?=
+ =?Windows-1252?Q?q24xPYMQa7A5DcFfZHxpgo4Vf9a+lf/FDr8JLblq6gLVN+HwkKx/OS78?=
+ =?Windows-1252?Q?mlxdTrL/30XY3DYpL/sPHYojwMZNO7fI5yeBlQUsiQ9QOR8uEjRMxxIH?=
+ =?Windows-1252?Q?wXCD7IEnRquNxXpANn3xoA5LxnYF8b8B9SbPY6jIzbdciGy8dCquIP+0?=
+ =?Windows-1252?Q?+BAJ554i0Lf4ckBRpqNqHPHxt+pg8YLVgjNpuxK3a+hPG+wnieVOe0RC?=
+ =?Windows-1252?Q?l5DbjP6+IsUHH27DDAWPo25QC/TrXEzt8/3/fCSLavwuiofnHx3a5hnK?=
+ =?Windows-1252?Q?cgBE6Mt+WhZeNstUNA4epD06aUXvAyqtJiMvmguRt+ekrazG30dW7pc+?=
+ =?Windows-1252?Q?L8juOK0V4v9n3drBHrvcrOTCUvEtVDZiDmTWauqiYBCiN8sq67/4CARj?=
+ =?Windows-1252?Q?sYxwiJK8fLAE4TAPmPpl+vqYAGp3swm4+JVZbAnm9Q6R5t3aRrEJNyyf?=
+ =?Windows-1252?Q?ZIeJhiFptZwN/LxUvYzg3v40bEZDLo0cH5WpKqOzG1pP3FDOGxZZb58r?=
+ =?Windows-1252?Q?YBSZVATFvmCzzC6g5lCzN6RVyXjtHwcISEVgZl6m4VoEpzyiwVBL65Ep?=
+ =?Windows-1252?Q?+o9QIP9cd5efJwWnt4HfNHtAvTK2tnD2RxBJv5ctLEU/rgBck8mH1BXu?=
+ =?Windows-1252?Q?18N6URxRHOvpb82XDfJrgGjOBctsLEYrjwSUnvBpJ5XjftyIRsN96vX5?=
+ =?Windows-1252?Q?F0KXDip+xFDYo9d2zcI2YEsIQiPfrMQlbg5PyiuvRUjwDBkfGvitM0w2?=
+ =?Windows-1252?Q?0KhwA5nu+ZPFYPIucXDRcJj1v2J8/qtONMb7QzRwgJh+eJNPF66iqpeu?=
+ =?Windows-1252?Q?W7JbbiR6mx8L+LBq7WAYHierqPkuytKz3k8Oz8Y4tYlk0T0n3R9mKgbn?=
+ =?Windows-1252?Q?c8EYoPCqeWsnqrBf6NSLRHxYQyOh1SYV6afCcahJGIrckRMscvlTMTeR?=
+ =?Windows-1252?Q?jLIoNE0SdAAq5NfAz4RXxvnX37e94CZssr/nQRlQmyTWyET6PkDIAYDw?=
+ =?Windows-1252?Q?hOLJmOMKoJBGOMtQkt1ZX/oUU0ActZdLx1xSGeJ2V5g03/Xha3+6sr4l?=
+ =?Windows-1252?Q?DsrpzIKoNwX35f+ghDXaXaY/2p9/Kv1/mvq+EXiccrZaM5uqbF9Lhb3H?=
+ =?Windows-1252?Q?PGWaKVRDTMyQBGpiSL5FLM7Bgy+vdWgJ/0XcyYcDGyP4W0184y/5vcV6?=
+ =?Windows-1252?Q?ufLTuUKV?=
+MIME-Version: 1.0
+
+----==_mimepart_676a8643c36fc_a021fc436cb
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+@tiensonqin pushed 109 commits.
+
+9e10dc17377fae11184770f390f9dd2c0b28f57b  wip: use :block/tags to represent block types
+c5fa699db068654fb51482f801f2491baac7ca6c  Replace more :block/type
+c428b87dce9e19c971dc1107ff65c26d5aaf94f3  wip: schema migration
+4e9d071fa00ae3ef2123260e864a871abc2371af  fix: migration
+c7e26a671ee415df6e73f51a40cacda0dc6d98b8  fix: schema validate
+f2fa4848bb4cb26b19ce9d6af4909c2987db2979  fix: property type
+41bf1cf5b57e3cd504878b065fca6dcde774a24f  enhance: show title without tags if a property has specified tags
+6e2839c36a6eaae9df5d04f5725057c3fed0d692  fix: transact depend classes ahead of properties
+16f0491104b30189121d6e1c8dea60343c767432  hide internal tags for node types
+77c514e3debf3ed197b0a680316a3451d33a174a  Disable users to add or delete internal tags
+a2bba9e27a77e00f7b3b0596ce18abbc768e2ddc  fix: entity type
+e6a495bc56702c668c8032b090645b1b16901d15  fix: closed value select ui
+93ae0047bef5ad6c51e8049d73cfc2ff5a80bc9d  feat: allow tags to be used as properties
+6505d535c3b36242107c92c10319b533a8d0d745  Add shadcn tabs
+646566399f17a97634de3aa2e810f1ce7e1bc0b6  enhance: put tagged nodes and nodes with property into tabs
+8714df3d8ca00fc384155161cdc3e9328f44fdf2  enhance(ux): put property configure in tabs
+b5b7c36a8f1faf3e30c1dc0003e23c3ae9d60dd1  enhance(ux): able to collapse tabs
+cb01d6363b8327b35e90bee8786ee916a7d8f534  Use gap instead of margin-bottom
+e54ab479ebbae80a8330d57349784d5175491ceb  chore: remove class icon from page reference
+57912bda1500a14f24595db0d2e8a3ec37c3d4bb  chore: hide internal tags from all pages and graph view
+a73606155bb0867bdb09ac627e82488a8a8d4e29  enhance: allow existing page and property to be used as tags
+253d068e3392530cbb30bfd59badde9e95d625d1  fix: set internal classes parent to :logseq.class/Page
+3d84993d6de9c320f5c222ea3480276f50011a44  remove :logseq.class/Closed-Value
+a97714e7fe0ffe126718d3ce94f14fa0d2348d02  fix: tests
+1979b70b328ead076b0820f61082e3d4faf46a85  fix: db tests
+caab95af522996b84e496acc512fc3d3d3cebe8d  fix: Page tag in exporter
+37747507d11aeaf6f063757f423649c6d7c48ca7  fix: lint
+86f510ea6ce0c5bded71d7e507e3cf81e14b8102  fix: lint
+c02270f34916732513f9704be6929128391d6488  fix: outliner tests
+c78d0193894bf8763c84d09990e55686bc8ecf4f  fix: don't overwrite internal tags when importing md files
+e737a69583e62abe5df37c96b1e97103d2d5030d  fix: importing tags that have the same names as internal tags
+a025b4b0963e275c955fcd5422504795b76cd852  wip: fix exporter tests
+916a3e5bb1db2c84e7fd15f6bcaf072909349105  fix: lint
+c6c925d40e95dd5b87aa3f6733feb257e5d80d57  fix: exporter whiteboards tests
+1269d1c2778b9e990c241f85ba009f33e67da2b6  fix: more tests
+380628650e398df3e4e484c077de889de24dd9de  fix: more tests
+87caca8c680ba982fb6dba3dcd467fd6491a7881  fix: some imported pages were missing Page class
+a2a08ef64713dffd80faa68c04e07f3b517a54cd  fix: graph parser tests
+2a373113075f723694dc726fcdb0f085f32fb980  fix: disallow removing #journal
+d4b6a3af88cf2462240b8279e965a47ce55d4120  fix: remove hidden pages from views
+7d961ca915d480127cd20d57074d070c4547818c  fix: disallow setting internal type tags to any block
+7f80b5c3659b4e46a6283fe8bcb1499bbe0b24cb  chore: move `block-unique-title` to handler
+953f846b8cb14fdd2e92d4ee80c8dadd30bddbe6  enhance: don't show type tags in unique title
+aa8226aab5f48d8b5214f61e55cbf347886b7781  fix: root tag page crash
+8c19526e44a4c324067fb0795003afd900301462  fix: transact class db idents first in db migration
+066b50589d500cdb333961d1c48e598ca183179c  fix: notify user when rejecting internal tag
+78aef6136015c151f5221d64b3d83ca9aa3ffdb8  Add electron-devtools-installer
+9cac93c4527d7e2c95f92fa8827987a44e876b3c  fix: page? and whiteboard? should work for file graphs
+d1052601d8923a2825572929036b0d87e1195f08  fix: keep electron-devtools-installer in devDependencies
+71d4e02703e1f804fad980f66fa4384603b2bdfa  chore: yarn.lock update after last commit
+ee6fd77c4ab96e1777b7c797b27d89e682e793d4  enhance(dev): reuse test helper from graph-parser with other deps
+afab95f8fcc99df14432e54fee3e7e3493e9beef  fix: imported properties aren't both a Page and Property
+596700c6a3653a0aa06e1725314f2ee7cfb1099b  fix: imported tags aren't both a Page and a Tag
+3fe71cc023281a04a82b285bc871f2afbe19169b  fix: tests
+06b9f6107d6b4bed5bbb99827c9173c55f9c6e0a  fix: tests
+02d6bcf0a4b5fc80ff1eb82678ada2e2d5b38422  fix: rtc db listener tests
+0798f0b7f68c095b38182d3d977dd6a162183ee7  fix: page test
+600372a17158ed5fa7109d6a3e66a2bf627b30bf  fix: tests
+7bacc1fc5dc44dd4aa1c7cad0ad4e7f6122a43ee  enhance: assert not transacting entities
+9b6d09bcfe897e1d1ca5b2100d918382c45d974c  fix: tests
+2eb86ba253e9a557322562237b2bbd75efae3c93  fix: tests
+f67d47a9db45bcd927358f1c56ba5c7269457061  fix: tests
+3a748c99751a17420be4a5b496f91efcad4f9ed0  fix: lint
+0ec09b6f0a1905efb3b048dcb1081d078cf87bf0  fix: allow #Journal, #Tag, #Property to be shown for tags property
+f58f83eb38a33f050847d512af273108309e9e0b  fix: more imported properties and tags
+3dff9e26c0f80b497d8a4f879a7612d6a11a2e5c  fix: aliasing of namespaced pages broken
+a42d4a8f7d07b1e62d652b70fbb4c0a82a5892a4  fix: can't create an Asset from the Asset page
+06f31d2b00e09adeb0b4c85292b5feb2be7051a8  fix: disable setting parent for built-in pages
+f1430e2791c8eb908bc8d810ff049330df980079  fix(regression): Tagged nodes can't be collapsed
+02888b9e6ff8331a806cb7a43e60593945630515  enhance(ux): allow view title to be collapsed
+63191e40af4e3f7a26c272c5c4375a2f4c150d5b  fix: style
+8e0afa80455777ecca95b798f33a84889def5e9d  fix: lint
+953d9e39cf6b1f3851a282ea4d70b36856c3d579  fix: users can't change parent property of built in classes
+d624d5e7db26b91b9298398407a93c56791ded78  fix: users cant change tags of built-in classes like Tag
+4dc07f275b11aaaeca9426020d5cd67ea15cfed8  fix: creating views page for file graphs
+8cda4758a2df987535930ac004f06fe63c9efc7e  fix: built-in tags modified when tagging node ref
+26430eb2ca2d3708360b86efa277365d3ccbf60c  fix: convert page to class
+f092acb798567839ba5f684cc8dc0304d7850a55  fix: tag conversion removes extra tag
+5036b976abaa533318f34e81cce290e8c336f41c  fix: Tag and Property not storing their parents correctly
+05a31b7d76103e7293aee7c86b72e17e7e064f4e  fix: importer had incorrect set of Page based classes
+f72370d21eb6529ff64e0f5c2289b5b68d44bb1e  fix(regression): blocks can't have duplicate content
+e51959da0e00acdfb4f664f9ee1a7db5e033088a  enhance: move tag remove button to the left
+57d1c60acd98543bb0cf62020fca5b2e9cbfa955  style tweaks
+7506936481ea35345a0fff02370ed722a1789f3a  fix: db migration
+ac156c403fbb65cf8c462475dbe8625b80596d66  enhance(ux): open properties in sidebar
+a23b821cb563dd0b367c15958ad901f849627170  fix: lint
+f391f19e7b3699aa312701bedefe44d9b16f24b3  fix: logseq.class/Tag did not have a Tag leading to
+5399278bb6313f59219491b18eea6f4ad77f6797  fix: page-exists? not returning anything for db graphs
+f5e7b2ce837aa35ff6e1e0fc3b255451c302ec6c  fix(regression): skipping validation on journal creation
+fb2340c1a1d7552433793dd1cc50558fcd071343  fix: new journals should only have #Journal
+7b885a55ded43025ca9ab8431948ad54e6bad22e  fix(regression): tagging a block with a page or property
+bc0f63694a75bf02addd020cfd765013c2bbe5fd  fix: Don't show 'New page' in page autocompletion for
+ad485875fec695db509a0dd55f76a7a9b5bbc07a  fix(dev): update debug edn of schema.org graph
+cafa70f4092fa2c9481a6797d3d6d78942a84908  enhance: properties, tags and other core tags can be queried
+48975198157e57f8ea33f89d4ea0c429af240d61  fix: remove unused core schema attrs
+de339cb6f7f5576339462d91ceac4030944d75b3  fix(regression): file graphs can see and filter page type on all pages
+7fc777de96900ba8701a77b149cb9c4cde529567  fix: new property name allowed invalid characters
+9d3b5a42bb08a897dc2e960aec391b8cef763035  fix: new property validation and test from previous commit
+cc53500815a6585d982cdc3bec0c00353f1f3089  fix(regression): Properties can't be renamed to a built-in name
+3638644dab0cc84719866b8f822a9280b691d4b0  enhance: improve :block/tags validation
+e5b32b16f5020cbe4f7cc5e2efe4b1a9676b6e31  fix: invalid entity when user class is used as a property
+c7343b259f838ca421acfa0ace2c7366b1112ec9  fix: tagging built-in properties and pages
+9ba95a0beb07fc6b51fa728dc712b4ee933b618c  fix: tagging with a built-in property causes invalid blocks
+2599b4576831dc935ec625816fada156a492d76b  Merge branch 'feat/db' into refactor/tag-as-type
+b2d6aa495673f28bbc5d635344be03852274d19c  fix: accidental temp file from last merge
+dbb84f0327bccd2054ac281596939b19ed08c746  Merge branch 'feat/db' into refactor/tag-as-type
+a3f6e074c9a2131775e53077477765479a2da203  Merge branch 'feat/db' into refactor/tag-as-type
+48cb4d2f9cd389f4dcc3498f307f0b727609864f  fix: unresolved conflict
+fbefade53111076418598feaa23479b06f3aed50  Merge pull request #11634 from logseq/refactor/tag-as-type
+
+-- 
+View it on GitHub:
+https://github.com/logseq/logseq/pull/9858/files/94d44f0c88aafbbd3bc15bd4d9b8636e7555438e..fbefade53111076418598feaa23479b06f3aed50
+You are receiving this because you are subscribed to this thread.
+
+Message ID: <logseq/logseq/pull/9858/before/94d44f0c88aafbbd3bc15bd4d9b8636e7555438e/after/fbefade53111076418598feaa23479b06f3aed50@github.com>
+
+----==_mimepart_676a8643c36fc_a021fc436cb
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><p=
+><a href=3D"https://emea01.safelinks.protection.outlook.com/?url=3Dhttps%3A=
+%2F%2Fgithub.com%2Ftiensonqin&amp;data=3D05%7C02%7C%7C24ac0393fbce4a1025be0=
+8dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312387068367=
+%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOi=
+JXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=3DEeNk4ke=
+M47oN1ueojZZhXybF0qPCwZBAJShKRmEWX28%3D&amp;reserved=3D0" originalsrc=3D"ht=
+tps://github.com/tiensonqin" shash=3D"RYgjg+Fs6QdT/7ayAcMIphCWeZZ76/U3cuprJ=
+97pymn0vhbwJ9+FumtcBfzlUItK5LmaOt4E5IoWYKqBGrCFXNHvhX9KcMrX+r6laLoymlR3+NcI=
+CoIgwfOSg8mUGnpZVG0NlB8TyMNNum/2L42BkBU73VZJG2qD0jAGVGFNr34=3D" class=3D"us=
+er-mention">@tiensonqin</a> pushed 109 commits.</p>
+
+<ul>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F9e=
+10dc17377fae11184770f390f9dd2c0b28f57b&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387091520%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DflHG3amDwX239KBoHGaAHK2NuHDgZQB%2BhBjctG9KN7k%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/9e10dc17377fae11184770f39=
+0f9dd2c0b28f57b" shash=3D"sxG6VTUwHjclD4x8t2PMTMVbO9mtDPkdd8MMD0TR7KmogX7F1=
+/ArMXgUtMR41jvSem3ioTqcO3IMTwxFElLgGrdbRm5budxnZZ/1k/+7vrIHxzd0Nc2ADvpzylBi=
+XRF+6dn4zHjAdA0+K4/8WdteJROBXQ11rYtytvjeCsAOpc8=3D">9e10dc1</a>  wip: use :=
+block/tags to represent block types</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fc5=
+fa699db068654fb51482f801f2491baac7ca6c&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387105968%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DbPvsxTYZwqwxIo4%2BkIEaU%2BPQr6tqaOSG1acwM751Ubk%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/c5fa699db068654fb51482f=
+801f2491baac7ca6c" shash=3D"q/dc189IT8H1JckUrkH9qkdqKRhNiruLdip+9iIYN+9LRtU=
+xKPTiezleQUqNG7WUvxPnL2ZdE4LOYtq5ykQox8klfZ60ZZ/LGrqOlGyD798TgHHCXR+bmPyO/H=
+KYic3mcFt5CVDujTWjD4KVroYv4pSxAB21QCNY5eTRxE4/9rQ=3D">c5fa699</a>  Replace =
+more :block/type</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fc4=
+28b87dce9e19c971dc1107ff65c26d5aaf94f3&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387120512%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DNSo2JcERBRXk9gLtdq8S8Rrqet%2BwnCHV2MpxE3ueTF0%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/c428b87dce9e19c971dc1107f=
+f65c26d5aaf94f3" shash=3D"f9/D1cH4Iu+cQLZItkxLup0H0I9A6gM8+2g+T7q6mBip+vuDw=
+Q18hC3x89kngto7BL7zLGiWYtJ8PnIgh6+UeFYj6bLKSR36mZ3gQI+2sOmYcFprXocONQcvg0fK=
+Au+kJH5U3Ot9Qt5bdSJmmkO9HL4SDl7eDi45pzCsryuLB10=3D">c428b87</a>  wip: schem=
+a migration</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F4e=
+9d071fa00ae3ef2123260e864a871abc2371af&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387134214%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DFN5jpiT4C6FvM1pdpulnOq4pBrJrBccvus56an5EOeE%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/4e9d071fa00ae3ef2123260e864=
+a871abc2371af" shash=3D"NVAwUL5nJMfuKtYsL+X7VG7Mrxk4BAOomBIfFrjurm5Hoyp1y3+=
+bXX2CPv5yMC8g/BrSfNH3mj8cEWf6eZ7fMhpfXXcGTtVowOHZCIlt4//+iY7JK6xouPe4bjntbh=
+RegEpvTwXBJ6vG9oThEbMVjLs0LPeuLMb1/kwwA06PABs=3D">4e9d071</a>  fix: migrati=
+on</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fc7=
+e26a671ee415df6e73f51a40cacda0dc6d98b8&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387147929%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DH49JEHe6QssT45F9f04ap32PPoj1UVFf6KbbY4jA6b4%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/c7e26a671ee415df6e73f51a40c=
+acda0dc6d98b8" shash=3D"m9EKkLc2T04GnbChKu7lCwlPnr4HNw4rg39ZlP8+JQYXQ1AU7TF=
+3VrEVG5j5Qlvq7fj5o6vNoCYXFNJGEv03FryJiyy0ZNokkuwZYIw+/nPYjojzyzOPGGTr4fjvsZ=
+f0fb2IVZp0q/YksUC4HJ4KpdG/jZh0zaCsmITrhK9JduI=3D">c7e26a6</a>  fix: schema =
+validate</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Ff2=
+fa4848bb4cb26b19ce9d6af4909c2987db2979&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387163119%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DOH0%2B4DG2uDGOMAANvNkHdXx4HJPiQduqpWCOXfeFb5M%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/f2fa4848bb4cb26b19ce9d6af=
+4909c2987db2979" shash=3D"TwbwNRAQbY/X0GtPcNp9KXF+gGbYLXAjHmQuC/6vf1/b0F1WT=
+pu3R06ezaapIkpLmT5WhscB3SNPg333GobnaEDqKSPgGnmVtwdxIazIJYe5sBqWivmmRLTKD+nA=
+1FdXAkL4aSTYXNX7i9ToI/kqCUi8OsSuL83AFpC9vUZjfHE=3D">f2fa484</a>  fix: prope=
+rty type</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F41=
+bf1cf5b57e3cd504878b065fca6dcde774a24f&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387176298%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DiL%2FTpgpme7cu69cky1J7dIzIujwPzXmod9cINgX0MGE%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/41bf1cf5b57e3cd504878b065=
+fca6dcde774a24f" shash=3D"GPkHYN2K7xOjGjVvcaJ5sQWwAut9YR5xHxJDpEC64mKR4uxjW=
+oczyy9P+c5tIsEneBiUPv4Ywahtc9DNkLFUlr0YGIlglFutYHKzTjlerj3NOu5Dky4FeUXav/TT=
+qIrjJfqvcnevJxVJF7/x+FSmFqTHZakunzuA/h7+rJiz5jk=3D">41bf1cf</a>  enhance: s=
+how title without tags if a property has specified tags</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F6e=
+2839c36a6eaae9df5d04f5725057c3fed0d692&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387191384%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DOB5x3%2B%2Bm0lJL4UUjaHFu8WZi5IDgwzMRQVHhsWXEM4M%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/6e2839c36a6eaae9df5d04f=
+5725057c3fed0d692" shash=3D"FvKIUHygVeXipcPKrAvA7JwbGkoZ6ZShlsn+9XKNucU4xlW=
+d6w++07V7fwZl6B+vQ+dMBXPKAz58p/FuMKdeg7KvnhDQ27LO6p3+fmEz5ofc1RNK2FK4pShwzK=
+WpZeidVroEsZdJU/2zLsDiog20BCZgtjwbfICXn9AmO1uK524=3D">6e2839c</a>  fix: tra=
+nsact depend classes ahead of properties</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F16=
+f0491104b30189121d6e1c8dea60343c767432&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387204500%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D8sIGLlJP9IrbqUoPwoIFAhSkjYxVHNXaWWU5ggTxfr4%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/16f0491104b30189121d6e1c8de=
+a60343c767432" shash=3D"Hqx5yxY7MIkIzHa4sWbtKhKxGP9pFfs6XkfsEoyst+oQ2bVW6xe=
+FNIb9BveGXur2AA6EkDxVZk8KWsV6BA6M4qKv1km7+Qv+VAor6yz1pj+NhYbTlrthzff/3aQOk/=
+5J2ImpGKX1WXGkiZYkY772mZstJgFl7I4keDm9lP0KTVw=3D">16f0491</a>  hide interna=
+l tags for node types</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F77=
+c514e3debf3ed197b0a680316a3451d33a174a&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387219101%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DJepReJPNsQhai4XxufpIMzkNsAm%2B5IqL8xGOCNlOBgA%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/77c514e3debf3ed197b0a6803=
+16a3451d33a174a" shash=3D"ibPaI2E+sr6gNCo9pT0eYJyhdejFENauVTRNDiGjE1R5zfeQE=
+TcmPltmM8SOaluz3GA1uQ1yovdKZXFfnkyqhUznvcwvyC7C16UoMTMoiCGuyRGGrYXK684d0sTf=
+3u9XBPWFs4Hc5t/psKh0rWSkrLhZmzoaOd+6NvdaiT6c3Wg=3D">77c514e</a>  Disable us=
+ers to add or delete internal tags</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fa2=
+bba9e27a77e00f7b3b0596ce18abbc768e2ddc&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387232885%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DVwXOooxMRfwRvot4sQNumMK9XAJ6hS1DCPtYqkWeXPo%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/a2bba9e27a77e00f7b3b0596ce1=
+8abbc768e2ddc" shash=3D"VQrvRV5TZrgk02+SML7oIKks6gqKag1UCpsbypxqFycUMIXKWiN=
+WRAacZAMdbgXlFvQgqdDy1QKhqtQx3dpBZRi6hO8ZfdKo4nu5wINGxxPUEUAEdnEWSOccaOSj1V=
+Mq1R5sybhR59aWZB53bkWqu4VHt/Hlfep9H/MXQELnf3I=3D">a2bba9e</a>  fix: entity =
+type</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fe6=
+a495bc56702c668c8032b090645b1b16901d15&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387245532%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DbmUz%2FZs96iFnAl4CWHOSChvrGtwvRPn3omqM4VdtV%2FQ%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/e6a495bc56702c668c8032b=
+090645b1b16901d15" shash=3D"jjzGMC4JqeDK7dqnXwjoJ4xKgTCIHt/MN3FgrAO1r3LSBMa=
+RVpyJQy6lYKAd4FAdrSH72afNCeXL93HASyiYqwkcGAYjQICdGbAiT0W0xNOk1ShopVRUjoZ5LL=
+W8+eNkgJTmGCQRKdt9n9QMK3C1pzIOQoRZszq+i9Jy1sG41IE=3D">e6a495b</a>  fix: clo=
+sed value select ui</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F93=
+ae0047bef5ad6c51e8049d73cfc2ff5a80bc9d&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387258423%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DCEErqegvhK4dNMqXJVho4tnWFtBiA3jWgpKW%2BPR4Wt8%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/93ae0047bef5ad6c51e8049d7=
+3cfc2ff5a80bc9d" shash=3D"VawlmsaJ/L0H/vToalK1snrsvAVqwze826XD8O2CP4iszgppX=
+ktY6x2N8pHRElD4e/TLqLTBMPbYE7+pojJRP5Bo0Y5C0mczDLIszty7GpnVPep9YV0PUFgQWHIF=
+J1AcRIQ5PsJYGiJbOLya9DBaJF9thHAD4Z/lXTwxfnqu8i0=3D">93ae004</a>  feat: allo=
+w tags to be used as properties</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F65=
+05d535c3b36242107c92c10319b533a8d0d745&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387272669%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D0alwKVRdcSxyMMUR%2Ft%2Bw85cEgTxXesccMUft6Szv76I%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/6505d535c3b36242107c92c=
+10319b533a8d0d745" shash=3D"ORrrYlIDN4+CY7QSMXs3RoyYW+KdJK9YrOw9eSP1jAordzG=
+hFMumPTB2V4EXU83ijBfsGLMy+H2gd+ckvwlkxMDgCeOyFoXkKLKNwNT18NzTp0om9S4FR9N9Ct=
+gppPQN++TGjR7B2iWC/T2Z4CwOjFT1xg/dycbvj9d8PXx8pXU=3D">6505d53</a>  Add shad=
+cn tabs</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F64=
+6566399f17a97634de3aa2e810f1ce7e1bc0b6&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387285044%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Dy33dAXt%2FrMgtUXRnVEeDPvjzDhgtLyyjTrrcQomQg78%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/646566399f17a97634de3aa2e=
+810f1ce7e1bc0b6" shash=3D"PZNSS0Twzns3rxRt4KfDbZKBND0exHaILKDy3xR2MQ4YCymCQ=
+Olhj96KKOJc6OzlncY5BWx6DQN17ToRRioGzeRlHxTHyDA0XMAV9cDKaA8dm6j+W/3InsDHU8eV=
+Rm8JJG9+emkly0lF5ZwoMFh8QrO8n6MKyIxMd5IUGIbjP6U=3D">6465663</a>  enhance: p=
+ut tagged nodes and nodes with property into tabs</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F87=
+14df3d8ca00fc384155161cdc3e9328f44fdf2&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387297327%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Dlcrqv2bWxD9d21vC%2F66l0G2eRDaxcKXyYcXd3cSXeXQ%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/8714df3d8ca00fc384155161c=
+dc3e9328f44fdf2" shash=3D"NWKCMGdFG8QogAyXx0TmBvWFv5sIkaxaCei8ujUmUclyUEOcy=
+1xYtspbhDCU2BpbPTYUbK2j+yWN5LjRbaYRerARi1qcuX6/X5G0eV6w+XFZXiFPsvr5pMXhcFTo=
+ljCVqIy8QA4wi5cZFGlYTI8LU7P6HYzmk6iL7YHbc5Iz5bQ=3D">8714df3</a>  enhance(ux=
+): put property configure in tabs</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fb5=
+b7c36a8f1faf3e30c1dc0003e23c3ae9d60dd1&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387309982%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D58NbmlzcVYVzzRaqe79WEkCMfbxqVZJh%2FtNJ2DOhWsU%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/b5b7c36a8f1faf3e30c1dc000=
+3e23c3ae9d60dd1" shash=3D"dH6PYFSl9uxmcM4txuoIFNmov2TjhQFPGZABws/rlFDe+41sO=
+/KxtYZKCw7UHr1TD4GmCf+WOuPghOafmx49s3rqP6oC8VKZp2Q3qq+WQ1MK8wt4fhidVcNflSc3=
+x5ZAuF1s7FExXYRKgsU0AJqHSYcdS5TgSjl+qTMiO8GuDQY=3D">b5b7c36</a>  enhance(ux=
+): able to collapse tabs</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fcb=
+01d6363b8327b35e90bee8786ee916a7d8f534&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387322321%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Df%2Bo1zMDlgAEyJ8PUvCgmHAidgxrkQ4abFhQY4LfoUdc%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/cb01d6363b8327b35e90bee87=
+86ee916a7d8f534" shash=3D"ZwY46OVHj7t6HRat6A+GTQqqu1ji7EUkaTThhwVBa6L4aLJqK=
+X71+NYU/Ytgm4+IBUmNODI7/l05tnZwBt98ZnFhlPCAWI+5vB28NGM76frtbSytRnzzdocO6qY1=
+LMNw5fn5E1wDG0r4lKz80JmyhwB18i/781UwflAw2Xnw0SI=3D">cb01d63</a>  Use gap in=
+stead of margin-bottom</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fe5=
+4ab479ebbae80a8330d57349784d5175491ceb&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387334866%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Ds3OW9%2FZVeuJaReTSin9RFQaKy3qtC3rkEdfaE8BKv1A%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/e54ab479ebbae80a8330d5734=
+9784d5175491ceb" shash=3D"N7yp6qf4oomDARuz2LnSIBTk5lQ0GWYrHt2W6IfGIAuetUktb=
+JLk4NsGX0qq8nv6AVHj4c3DT1xq7c8C9n+kSKt+bc4rbWab6jluwmAgJmIODgGsS4JjBRrZDaOv=
+qwNQNyZSDeQycJqrXcwFIe4bw+DtBsnkhRTxBQOTvHct9KQ=3D">e54ab47</a>  chore: rem=
+ove class icon from page reference</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F57=
+912bda1500a14f24595db0d2e8a3ec37c3d4bb&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387347433%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DdER2KpD5Qg6OXo%2FG%2FcXskh8qtlNSnymOKMapQRsFdow%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/57912bda1500a14f24595db=
+0d2e8a3ec37c3d4bb" shash=3D"s4tVKt+NH0AtKYm/YKSjxsifzS1aW5f2yyxjMablDLbhrwn=
+wnZMHEPugyjQGctLJEkUdyj/Lych0SQTu9I6IW4hfGcGMOQo/8QqcGbGxHiZBu2TmpvCTZWorBf=
+th55KLa/sTljv+nQlR+rUfv44nOIFSpdzoImL3pQKX0p73cWM=3D">57912bd</a>  chore: h=
+ide internal tags from all pages and graph view</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fa7=
+3606155bb0867bdb09ac627e82488a8a8d4e29&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387359855%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Dtwh4pbozks6%2FWa6vebzU1SPsPYAw8esvPO9VL%2FMOo8k%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/a73606155bb0867bdb09ac6=
+27e82488a8a8d4e29" shash=3D"AyZrOlR2ApOjljfplAQZ4x+SHLakXysS5KxpfurWqYQ3vSK=
++aqc+DOhkw5WXlSWTusiwFpZEu1cro2FI5Yl+CMNCVp8ZeF+mlCrHhVwdhPdXsT2Jv0srfwOXdh=
+/axHGuzddUiSt1Fgq6PTdgb7DLqhfOL/Q58i5d3ga945lqoIc=3D">a736061</a>  enhance:=
+ allow existing page and property to be used as tags</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F25=
+3d068e3392530cbb30bfd59badde9e95d625d1&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387373850%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D4YuNvhle3bkb2i52LvPjuDOzbrva8X9LyekfOdH0RTs%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/253d068e3392530cbb30bfd59ba=
+dde9e95d625d1" shash=3D"UCMcwb4LZs5I6mH8cUshAyHhXq2sp81LOXuAwLC19a9IBE+1OyC=
+VrRP+xGF6ockf73T7ur24NqQMNiKh21eNRBSbi2oxcPdE4rgsmKaQBaUx5ZquCApVFVXvEJRFTP=
+5Ho3axAhmuiCUiBuRMbJ/tflvgB2qY/9UvyOGniDVZ8CM=3D">253d068</a>  fix: set int=
+ernal classes parent to :logseq.class/Page</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F3d=
+84993d6de9c320f5c222ea3480276f50011a44&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387391101%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Dp63pNegLOHTHvYn%2BuuxLlQ4RzNlEFZnNO4LvOHDOn6Q%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/3d84993d6de9c320f5c222ea3=
+480276f50011a44" shash=3D"N1DCX/kfRhFfRCqnsR+pyVrDAfP0Anj1N+rr21uXTReb08jDc=
+hjsEtDkmKimFUWKIq8WpNH60gqsPkS9dmp0VWkIKLcjlFJpULwA+2Do6g2qcHbllXWgbtHH7yMo=
+Xjc01BgPSrurt0GMn2lyc+ZtgeV1XMf79ddN7hH9k9MfAE8=3D">3d84993</a>  remove :lo=
+gseq.class/Closed-Value</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fa9=
+7714e7fe0ffe126718d3ce94f14fa0d2348d02&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387408630%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DCt5VnRca5%2FZRnpzNf2zpraFXRHPFKcFM3QrZk02N8VA%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/a97714e7fe0ffe126718d3ce9=
+4f14fa0d2348d02" shash=3D"DobH7OGClIdD40OE8itg+uUkXe3HzxcLAYGhb9+2AaejDtU3Q=
+NtpV7PTzb1HiDFHEc8AFqHs2/n/+4TOHja1+k5EkJ09BKpxHlO1mLSjqEpDENczWnFkW0F4fPoJ=
+43kyVKTdDxXN1qLFktC34JevIr38c+wkB5tott40WZmBQMk=3D">a97714e</a>  fix: tests=
+</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F19=
+79b70b328ead076b0820f61082e3d4faf46a85&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387426702%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Du7WTn63A2R5QngDDuJTC2aTEG48wlayCE8kLH6sMJX4%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/1979b70b328ead076b0820f6108=
+2e3d4faf46a85" shash=3D"wKLm5sRTO7mTgHiuGlYzBErtLzc7nNGyv/AAoUIffXCMqdGh60E=
+7QjHJePxraoXcqGHFiW/JxgdToPyLbtgEcPdw9cDMetbqB9dqc+fUGj5ijzRmtTqrnZdeVC9ijr=
+y4GW93wpg2omAXnNjpavGnMdbJmGsV4QSr90yPlCf5Xec=3D">1979b70</a>  fix: db test=
+s</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fca=
+ab95af522996b84e496acc512fc3d3d3cebe8d&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387443789%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Df9u%2FwAcnwSgIVKE0P3BlbnSI8imkdYq8i%2BHFnLTcXIg%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/caab95af522996b84e496ac=
+c512fc3d3d3cebe8d" shash=3D"yTetJAcgcsrKj/GTEu+CCu/44Ykmi478oqCtR8rbHgfPzqy=
+G6ialbz5IkMnzPGMov0WstJAytj8/Wb5cChlJEK6nGNnlvUWpUnhQDj4kqQfamJhboyU6EWpqID=
+sAGLdJhfL8FVHSMFEZlTYY384P/e7qiEZlZj0TLFnzWIRtAZw=3D">caab95a</a>  fix: Pag=
+e tag in exporter</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F37=
+747507d11aeaf6f063757f423649c6d7c48ca7&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387463667%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DDN%2BdExAmFk9YEAqsKo56%2Bddc5WJ6v2Ta2c09I4JQ7j0%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/37747507d11aeaf6f063757=
+f423649c6d7c48ca7" shash=3D"DWCHGkbxNFAJB7k+sLE86gUyD5wkX9x9I3MFvnY4tvKli0n=
+Qc5oL4c+tOllnPSKQY/nSBg8MDQ2LbZuXldaaRViSAlUs1l2KkUfOETMvXt9aDj9Z5YyJ0xQ8D8=
+v3QJVk6mMk/DeDimefdWqhyqXJggrC+ce35ZssABBXDNzX4g4=3D">3774750</a>  fix: lin=
+t</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F86=
+f510ea6ce0c5bded71d7e507e3cf81e14b8102&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387481770%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D%2BK2whAypz2cVVLQ%2BSy%2FPoK741ABsyqqQysWGCZLeLSU%3D&amp;reserved=3D0" o=
+riginalsrc=3D"https://github.com/logseq/logseq/commit/86f510ea6ce0c5bded71d=
+7e507e3cf81e14b8102" shash=3D"dxq+Sn1rX5m4ajdBVI27xQiMTPhnzfSaJ+QDbs2Y0d3dW=
+tJVAdKooxOLtzKbQ05G/Audqf3o/zYRxpjNmXiRXZwtRqi9uSJQbz4c3Tc7VkfRnfzwqttJ8K+l=
+PidLS/gZwlhRYdojTlzn4BjucT8+/MwLp+USe2aFiK3atP82+HM=3D">86f510e</a>  fix: l=
+int</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fc0=
+2270f34916732513f9704be6929128391d6488&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387499425%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DnuO3OTfO6R%2FmWQgPdOUn1e7If12lglt3b4VcG7NlEOY%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/c02270f34916732513f9704be=
+6929128391d6488" shash=3D"j5nLP1XxwI9bUGyJW7y8BfWJw/Tc0mVsd3Q9Py79UUlJLM4ai=
+uhTMEmn7pYhMAQriRDcbTV2/0SjT4okygzoYoHG0ytyhvGDjB29FgOiZnX2WGvk46DhPcdh4O8X=
+ebQOjD3+Qw0WfyLLZ5VgC6S0frfQ3bF/Y+sfWosbpXeP2uA=3D">c02270f</a>  fix: outli=
+ner tests</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fc7=
+8d0193894bf8763c84d09990e55686bc8ecf4f&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387518173%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DpnokNccdyDt1Cw2uMsDKkW58ClwQxXPTk3b1qHAAAJc%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/c78d0193894bf8763c84d09990e=
+55686bc8ecf4f" shash=3D"MfjQm6wfrirES7c8U+4diCLNAZ7NSIJbvDbXUgvWj7pTb5DJ5uG=
+AcunarmmPwvXfcxtslW73rgJ2Vp5hBhikRytfEK7ieivIVIoPuVE7Z+jf+EqRrXApc3mtJE7ln8=
+AApMWwh2JMjsIi/XlBJIYncpDvu4sMnBo4CUxn1kGzRU4=3D">c78d019</a>  fix: don't o=
+verwrite internal tags when importing md files</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fe7=
+37a69583e62abe5df37c96b1e97103d2d5030d&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387538009%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DVWEz1xryLYPLKX1IypBg9WjM6%2FFWrx0dD%2FN9wJjeefM%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/e737a69583e62abe5df37c9=
+6b1e97103d2d5030d" shash=3D"ph1ufoLDynYu17Yo8/EoHaQ8ppMtk3di6NU7Vwu5gbHH3zj=
+O/ZheDwfxokC04Rwn3fiVGbxjee4b4ml63J20Y3T/qengsPAhxXYD8TAols3/TzkAiNbihmVYCC=
+pCYE/34c1/U6BDFs14Oj5egsNAyPxWQ4D+EOlo9FD2jf1b3PQ=3D">e737a69</a>  fix: imp=
+orting tags that have the same names as internal tags</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fa0=
+25b4b0963e275c955fcd5422504795b76cd852&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387554497%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D5kmEZMTe%2Fy7n3dqV3gqF4gKZQQlWGEpmTOD447DB7lk%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/a025b4b0963e275c955fcd542=
+2504795b76cd852" shash=3D"tuvsvBowsr+ft2Ji458V/3KmodmAoPzmbmrg9rdecc4W2Osdj=
+hriWoX8JnhX+uJG8974CMlEIWhglkQ+40KOwLVRJwKSnpkyYABH4xa3Rixe/GQaeLmgwHGqTc7I=
+cos3c4+hMgcFabUCfHkeQ/Xb3v6rTsMre5HlsX79o5n/iLU=3D">a025b4b</a>  wip: fix e=
+xporter tests</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F91=
+6a3e5bb1db2c84e7fd15f6bcaf072909349105&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387570551%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DDtk8hNUnBYIQ3d2CK%2FVBVsaCFVJcIwxC0kzdvCOh0rk%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/916a3e5bb1db2c84e7fd15f6b=
+caf072909349105" shash=3D"jy+N6imxUNN5Xi3bxMuVxnRI9GjL5Zl+1y+guHhBE1Xe22guv=
+eVAnU7X4TBO4zbxIDmiGjNbRGlDdIinOf9M/4tzfuCANFw67fvgbPNvod45bl/C7W2qzThkHZz8=
+3gJPK+qpAKMRMbo0vFk2u0aq+owt+hEJUlDFlmpV8iMgxs4=3D">916a3e5</a>  fix: lint<=
+/li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fc6=
+c925d40e95dd5b87aa3f6733feb257e5d80d57&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387584396%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Dl4iT9DF4y3kAIjYuRf5sd05hskxERtFECWK18cwY7L8%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/c6c925d40e95dd5b87aa3f6733f=
+eb257e5d80d57" shash=3D"bGwh2+G8fokWQjhn18gh21H0rXCFsuqLyoPqt9uswTfIVuRU6Nl=
+UxHvAM/+7HUpc9THMyerRAvu5DGDxR9jHfeYSW96VbZL2dMU8LKxVvEqUSXVGsSbaWe+MxMBRbd=
+v+YFNO9suW6PNas8DoIEENuiyqG78qhiHnLqbyepRxa4M=3D">c6c925d</a>  fix: exporte=
+r whiteboards tests</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F12=
+69d1c2778b9e990c241f85ba009f33e67da2b6&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387598656%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D0EthjtOK3nqonWHEwrGNKK1NH%2BF0kgzkJnqaKX%2Bk3fQ%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/1269d1c2778b9e990c241f8=
+5ba009f33e67da2b6" shash=3D"c1+ZlOu7BsbxUXfvoIrG2AP/QBvr+gSEVgoNJ8CPqjW6OAZ=
+Awes+bd6BEuPwjy6ZkdJwEenKeNrPRT+zxFOjgqiECxEAdD5NJ/UDuwRPm7iIe36Un9GILjscpH=
+WfVxDvhJbCzY23d8sBUYDBxxr3GBj0hu5CNa2t1lJSkUzQ2j4=3D">1269d1c</a>  fix: mor=
+e tests</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F38=
+0628650e398df3e4e484c077de889de24dd9de&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387613697%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DwLsuSaphpfw2sX2VflT3Rofvtq6Qebt%2BnSnpoL6eU%2Fg%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/380628650e398df3e4e484c=
+077de889de24dd9de" shash=3D"SBAtmD+IYjTvsN/pIlSe68PsNibPRG7rmhj5P6P1vP0J93S=
+yDlYDgVSXYEj14kLAgej80PF4LJWZj8YoJdNnKxf9E5LSpJ+KxMguaZjN7ClfAhXRuvLpdXRX6Y=
+xb1nvLqJ2uHHY3jqxnMu1XgmGg0wRV9tG+pEItzs5pFYRxNQ8=3D">3806286</a>  fix: mor=
+e tests</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F87=
+caca8c680ba982fb6dba3dcd467fd6491a7881&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387629333%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DXXYfmQRVrHFOJ9NfqVOhSe%2Bs4bckQnWQgk2bnN0W%2B%2BI%3D&amp;reserved=3D0" o=
+riginalsrc=3D"https://github.com/logseq/logseq/commit/87caca8c680ba982fb6db=
+a3dcd467fd6491a7881" shash=3D"t311a0tvylIPoB3xlZwAXoJMnoiBuxcrCIuHbUg+qyqZ1=
+8+U13rfHR4Eghh7eUXF5XgClEPBY0kAdPH8Bp2gk/lEFEsN0YXTHYMaP4C4U7iilS8eBslqWLqp=
+dmJFfZfRxTCGzZirr9ozXuywdad6VQb4GeLyiHWYvDlffzLufZA=3D">87caca8</a>  fix: s=
+ome imported pages were missing Page class</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fa2=
+a08ef64713dffd80faa68c04e07f3b517a54cd&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387644424%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Dwv3MbjW0dZUCSZCKDBkkDsJg4QbHk88uubdxToHuJec%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/a2a08ef64713dffd80faa68c04e=
+07f3b517a54cd" shash=3D"HEl3G1NDfr1L77vCysE+LAN4NF0qN07FA5cNNOnlzM4reJbFTio=
+oy3iwyAD3i45M0/+loVQtmzlpL98EYov3rsewNpsedZOKMNHmGaL+pTZy5e45KzdR/Jxz8/9hgf=
+FCE0SeQukq0c9yY1usE1a3n/mWGqVw+Tjr+eMAYBiGErA=3D">a2a08ef</a>  fix: graph p=
+arser tests</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F2a=
+373113075f723694dc726fcdb0f085f32fb980&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387658025%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DB1PGgi0yXR%2FDcPUoqEtfWsiSPnQR%2FziErLaJkja6HcY%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/2a373113075f723694dc726=
+fcdb0f085f32fb980" shash=3D"MhNVzuEK6tNovxNpw/0Su30tthGupfRuU0KjqIGIj7fE7ZP=
+4I0F9OVCBPn1ywTQpMQxxhYssZN2FBYa3vrwMuiGpJOqvNUZ9esipgecqn3fqklXXPeifJtkLW8=
+Hdnt50tWgCpkgOIDIgtxajGmzTzsW/lblzZwPvrYTEo94VhI0=3D">2a37311</a>  fix: dis=
+allow removing #journal</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fd4=
+b6a3af88cf2462240b8279e965a47ce55d4120&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387671129%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DVtPAdeRjMFk0gqqpkNLkllpgdaYOqLOFBfAu9QBI3AM%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/d4b6a3af88cf2462240b8279e96=
+5a47ce55d4120" shash=3D"g8UagQAVgMcC+obHVxKTZ26FZLgpoLGZpC3Zk+19lvGCanLaZFu=
++dUu84STm1azBpRS2w0VSPvv+zoXGLFt78McpbSyRbTLrEzmYh9d/mB+oBeVGJOYWfyh5KnvA3x=
+yevkhGThmNj5/8O5c8ayVoeHvQYByaqmIweP6vOIBO/vk=3D">d4b6a3a</a>  fix: remove =
+hidden pages from views</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F7d=
+961ca915d480127cd20d57074d070c4547818c&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387683974%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DQGIUBkF1s7DOHnqy9FxO3yNe8LfRDEb7L57lH7lG8KY%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/7d961ca915d480127cd20d57074=
+d070c4547818c" shash=3D"SEUlroXYNxF2uMcBgocHip2QHOJ/8qq+55axD3jZFC4bENhd1jx=
+fLufA3qbtHB48Q2fqnhT7fxFHweXrqoIDQmXjBrdfT7kaJ0uXPbak2etxgj2mbIAFzSEtS0m4XV=
+8E6yZ0YbzImkPyHiTVAHOLgxq/oE0S/iDwftmizWTX8aw=3D">7d961ca</a>  fix: disallo=
+w setting internal type tags to any block</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F7f=
+80b5c3659b4e46a6283fe8bcb1499bbe0b24cb&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387700994%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DEn1XQUXGnmItKd1LsfNea1Q2cvNPjByMXWbJK%2FE1ZOI%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/7f80b5c3659b4e46a6283fe8b=
+cb1499bbe0b24cb" shash=3D"Hc+fMQoftZMbwGiDWaPeagnUpU1IeOFy4Q29JFVFmSoUWZ/zt=
+ZUhPBj0F352oSZU0iZYMCuM9k0fIHva1hke/0fC1uFa2/Q22jHE6IC4LFbGkR7506OUgAwUdUcH=
+upAh1rOsLZPURGbRctNWpd6bvMLxSyCnoTNvfiL9cV9MGr0=3D">7f80b5c</a>  chore: mov=
+e `block-unique-title` to handler</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F95=
+3f846b8cb14fdd2e92d4ee80c8dadd30bddbe6&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387717079%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D%2Bv21S479QaeAEMP2HUmU%2BoTn177LOHtTwfJyr3CRsxE%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/953f846b8cb14fdd2e92d4e=
+e80c8dadd30bddbe6" shash=3D"T3yF/ZikzQEmpxrIFaPNWw27cclA3h2dDLCtxV/Y5m9clsh=
+REftZcD4jfzM2gR+C3+o3ibihwfoH2dKKNrqXcufCcFY/2ABCEglIj2dKNzEDlQql1Fkiy7F/HU=
+qkqIGTR2ysqQdBxFPF4/vzF8n3wO+uyeeJHNWmT9xEKx/pP7k=3D">953f846</a>  enhance:=
+ don't show type tags in unique title</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Faa=
+8226aab5f48d8b5214f61e55cbf347886b7781&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387730282%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D8S7mEOQm6A%2BRy8RzhvW71wMhHlka%2F9neqfaxzwcYf4U%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/aa8226aab5f48d8b5214f61=
+e55cbf347886b7781" shash=3D"R6cTARB/JpTUalwYa4E9cLYGrZg5zLNMZilAk8fHUlyDeRv=
+I22Et2Ve5fpe27vEsMRvgEBCMUaHKkr36Jb+B67aRyxF1Fm7I1nB9lyktBQ2JOXcE8cxZUOhTyZ=
+5GNnMuGfAWAcIJhu75jmdjwoW31f4rVgb2mF+0WKI+VoiE5Pk=3D">aa8226a</a>  fix: roo=
+t tag page crash</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F8c=
+19526e44a4c324067fb0795003afd900301462&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387743478%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DPvFWEtZTv9h2biaEe2N7yWtK5q8Y4c8UCRvxGuwxL3g%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/8c19526e44a4c324067fb079500=
+3afd900301462" shash=3D"qGV0bVwdQRFMUZmsAf4bbh7JIslD2+3qkoKS6HoxrKMTE9mCU2a=
+daEi0yUsQ4kr75Bf92ZAWAKflaEWuxwVONbf/iIOS4oM8OtsCBrvrUil5qhiVKOmdK5m+9X98Kq=
+zk+IRyAdu72PG+Tq8jzN8Beqp8UIkWrMdEjl8UUnmtemw=3D">8c19526</a>  fix: transac=
+t class db idents first in db migration</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F06=
+6b50589d500cdb333961d1c48e598ca183179c&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387756604%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D5S9XgzNzHv7X8ILR52iKh%2BExrNR4gt9WcBN0eTtBNpM%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/066b50589d500cdb333961d1c=
+48e598ca183179c" shash=3D"cOexCwkt4udCXm95x9G5FoakGawac4vneb4KUXJv59JMgfL8F=
+f6ppy4wnTU5AxELnudE4lt7SDsgVqwEZoB8U/Xeb9GUrcI0w46/py2mnybn4NwZ2mE6cbF6jVCZ=
+M5Lq9Me/Ii/+rpTqOrpw2Ay96zf5gd7S8ppHHJZS+cC39xs=3D">066b505</a>  fix: notif=
+y user when rejecting internal tag</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F78=
+aef6136015c151f5221d64b3d83ca9aa3ffdb8&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387769714%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D7wUSNPmK6Lr%2FkQahYflOh9Fbr8DFznSDulEKiKovo9I%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/78aef6136015c151f5221d64b=
+3d83ca9aa3ffdb8" shash=3D"PcRblFgJKVru2/g2ryA5ljzatteq7LT3Tapr+gD0bQYVSDW8G=
+bh0BfOCWEeYknAjCuZxULGbUDnNgFUCvKbH4k3DuUZfpvVegX+GN3KLt+8GQKeCU8up9FemLuvN=
+HojPz42QKUhiB5Wk3oemWiFM3QQ79p8A/1NqSm0ujq9SVEI=3D">78aef61</a>  Add electr=
+on-devtools-installer</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F9c=
+ac93c4527d7e2c95f92fa8827987a44e876b3c&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387784570%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D%2FnyPPkJaienKB8BNz24K0ScgiqWGx6b2SvXQ5f2ZkOA%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/9cac93c4527d7e2c95f92fa88=
+27987a44e876b3c" shash=3D"aEMzI4ioFDJPzXnLVgS64l4u4PWx83Xte2barPdJMVom2Jp/p=
+vAwHW8wyTGy144hULteDtGjedelGjM1OR94jYCCoya1FgzlmIRzB1ULUy5F485YinShw9NYg5fQ=
++RXdenAffMl0q5hRmWiRy+81CWjySw/fPTE3jTh+ukahHlM=3D">9cac93c</a>  fix: page?=
+ and whiteboard? should work for file graphs</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fd1=
+052601d8923a2825572929036b0d87e1195f08&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387797415%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D6uRcS7HCefYzriX0TE26DfmIeXxe7WBsJYp6Py5o2WU%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/d1052601d8923a2825572929036=
+b0d87e1195f08" shash=3D"XGYR4cVtcPU4qh4VQRViwyO/8RVuiUqVp9TfsTKr9y7MmqgmMlE=
+PMkYc6iSdubcUUC00QMLaqQbud1AlPPJWbjijukSYx1m08Y3XW3e4MIYBV8JY2yQosdRPtPyjkU=
+b/T+54FYW+h43e5GoCmQswQ3o9hcWGCkcGCbt2w8ecW8M=3D">d105260</a>  fix: keep el=
+ectron-devtools-installer in devDependencies</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F71=
+d4e02703e1f804fad980f66fa4384603b2bdfa&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387810362%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DDKdZetgp7r18ZwpwOI5lJXN975iiy8qjFNeRmgndY4g%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/71d4e02703e1f804fad980f66fa=
+4384603b2bdfa" shash=3D"i1VZO7qKj112J57RJ9hhIKem46JnbAXrM5ZbBZj+UZiJKjhV9WQ=
+/QlcPkKyRXvCczXRH/VmZUueZAexZbM2kqGEyCPNBozwyidQn2bsJVvP73MZd94PkgI+8R2gY+b=
+e4p3Kc7m/oOv6JVosV80zq/kuaMOO1z5duT8jdDDEVT18=3D">71d4e02</a>  chore: yarn.=
+lock update after last commit</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fee=
+6fd77c4ab96e1777b7c797b27d89e682e793d4&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387823112%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D8mBt8ad3fa7787bzTA6kqIZ9bxflyE7Q2ScfY36PVb8%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/ee6fd77c4ab96e1777b7c797b27=
+d89e682e793d4" shash=3D"YjO0DmddEzKQKPfLmMBaxhMXBEhBtwGJQF7irf8+h2DD7sSBDvc=
+U4Xx37rXanDeOo1atPQ7jkuH/8rTPPYFGpta2ZHVauy8bFmRMsKQV/+ZBKQIYhjRYdBtwfaSMVK=
+S8r323POMceHWwWt3dJlLKFuyGLROIZKYjg7VfMxyHuoA=3D">ee6fd77</a>  enhance(dev)=
+: reuse test helper from graph-parser with other deps</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Faf=
+ab95f8fcc99df14432e54fee3e7e3493e9beef&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387836073%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Dzh7oAP%2BpdtlOWF%2B%2BWh2NuOBAAeM1i2yOnhRsAux%2FuJs%3D&amp;reserved=3D0"=
+ originalsrc=3D"https://github.com/logseq/logseq/commit/afab95f8fcc99df1443=
+2e54fee3e7e3493e9beef" shash=3D"ixgtLb0iEYVkJCXZHptfupYFidVVOCaMN9t5fFcApx9=
+X0LZTJwkzzkRw0DalXZrqICAL48RrQMr4iJoWue5eEnsTWFcA/AFZnIw83g+coLpWpu64Etal+l=
+NaCs9mZFBzAcFmOkav5LogbBDQkNfwkF0NI6de3XcjkQl2umDrdcw=3D">afab95f</a>  fix:=
+ imported properties aren't both a Page and Property</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F59=
+6700c6a3653a0aa06e1725314f2ee7cfb1099b&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387852649%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D%2BajL7PZzO5bd9vAMhE2zIvtXxKPZOeIZLldNkSw%2FMfA%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/596700c6a3653a0aa06e172=
+5314f2ee7cfb1099b" shash=3D"gOD/gRGNiHGQA3+ObYezoCZsMhJKegC9s31Ur96YDvSGRHR=
+h8yep3A30frwK39EglU/3ePxpkiThQLWTDsQ2Cy7Xgzm4rrM0jxrloEiYxthxJHarTziN0VmLEN=
+6kTQ9xsUFNBJ45InyvbgdHEfz56Emavq0Z1iep9OzgeVTKfAQ=3D">596700c</a>  fix: imp=
+orted tags aren't both a Page and a Tag</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F3f=
+e71cc023281a04a82b285bc871f2afbe19169b&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387867309%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D2p1TTxQ5Paj01lXfu5m1dtsG08DU%2BkUDG9w7LrqIWpQ%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/3fe71cc023281a04a82b285bc=
+871f2afbe19169b" shash=3D"M94t0zn/M3BGuhkdUhjobUhuo8LCJHS5291Wp9iEpIe8kL38y=
+gHmuZLoCoLLnFsURSL28oSuDSPl7xyCXyvU78VVUGssxzZtNI6RKYo0HQDQXVRQx1VUQo8IUyZC=
+on5ccpAFGQ5yPHHXvBW5FJZJbhE210KCl+MLynBca0smiNw=3D">3fe71cc</a>  fix: tests=
+</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F06=
+b9f6107d6b4bed5bbb99827c9173c55f9c6e0a&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387882615%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Di0%2BWohnGZDQ324MQ7XpuiqQ5vWUeROfzkoAzmJGYeFo%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/06b9f6107d6b4bed5bbb99827=
+c9173c55f9c6e0a" shash=3D"yfy0Vh9cenRf21XmOGhEbtYocW8+4GIIn4v8h88YgPXRUKSP8=
+CSQwA//TPGtVlJ4RlFf9HWiXi3BtAQ+3yOwx7DDBzD6Ce6gKTYdAkr5utmP1jjsdIP6KJuZtYbI=
+k5ecbOMGwWpyGl7BpTe5eiWy+g49BReDVKRgqXhYUuarNtQ=3D">06b9f61</a>  fix: tests=
+</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F02=
+d6bcf0a4b5fc80ff1eb82678ada2e2d5b38422&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387895904%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Dbq%2BXNhtz8ep4ikx1OENuNvvOq4XmkIJqdcYwbtQARAQ%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/02d6bcf0a4b5fc80ff1eb8267=
+8ada2e2d5b38422" shash=3D"xKJidOQgHfLZGPXRfps3ukCpuIlWOYUOkgGJXR/SwZbEX/Oxg=
+QK7AXDCtEMRm+uVIAW0n1+VOcmeH5wUBeqjQXTTaJ6EZhAVhh09XXoE1TvAwGQm35o29LbZnzyk=
+vrJ9zC6FcNMV+2TwUhq2WthnY2rK3pvGXTeYoAp8QstKMpI=3D">02d6bcf</a>  fix: rtc d=
+b listener tests</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F07=
+98f0b7f68c095b38182d3d977dd6a162183ee7&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387909612%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Dojmy%2Fv8Y%2BS%2BgxuFgi%2B9W4x%2Fx1iGHBKSqwjXHQhdWN%2Fs%3D&amp;reserved=
+=3D0" originalsrc=3D"https://github.com/logseq/logseq/commit/0798f0b7f68c09=
+5b38182d3d977dd6a162183ee7" shash=3D"pSkfBQ3gCVTbhssfxv7jlTqPTSf0Y6iPzUlYUA=
+pA5aY1XUgz9+2hIe5U7wQK5KjKQQQwH5/LGQLrv1eW8ED6CPjgxXp6Zv53ACk/n8q01xaugatzd=
+O3mTW2PR1VxCK5roTxwCj87Eu/hUtTRuufIQJeKXQ+CiC19249gLNNcP20=3D">0798f0b</a> =
+ fix: page test</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F60=
+0372a17158ed5fa7109d6a3e66a2bf627b30bf&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387923976%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DpIUryBqaCxJ3d8MJENQm00MaEiTrID1CD9JIUk8ClZM%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/600372a17158ed5fa7109d6a3e6=
+6a2bf627b30bf" shash=3D"WY8++Wda9dgUaleiS1BFlOWhXGqTiwJIwTpMNZuz51LxaT2etyP=
+umLhlMbevHaqXX9U3o9HcO1qjzaisetgtVyBYVrBIXyw6lw+9iS3nbXk7lyVqGvhI98tknljkWY=
+pmrEhDLQZmdOXsI4U21DwGrWJyRHty+SK2NvMn5U4LCf8=3D">600372a</a>  fix: tests</=
+li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F7b=
+acc1fc5dc44dd4aa1c7cad0ad4e7f6122a43ee&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387939252%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D6GdLh%2BLOPkaBdRseFKvcomZFyubJ26y23JBKi9TJfSU%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/7bacc1fc5dc44dd4aa1c7cad0=
+ad4e7f6122a43ee" shash=3D"R8HIgezKQO+ZGHu7jc3OzKjFnORbi9UamjuxiC5VbMUaqu8yI=
+7AMw6D4rIsIJ8p3psz/SY84bo1K9OaPtaesCK8zT6tg5RECew5h+tsm5IWTPUBfVb8M/1Qje4sa=
+F7RhcxfpiVV+cUN7vfhmqDo6/3KKltI98mtP0QS5o3X9rMw=3D">7bacc1f</a>  enhance: a=
+ssert not transacting entities</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F9b=
+6d09bcfe897e1d1ca5b2100d918382c45d974c&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387952986%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DS0B%2FaDijjjJjGl5gPTOS6fhLSirDkik%2BtTTTLFGg%2B84%3D&amp;reserved=3D0" o=
+riginalsrc=3D"https://github.com/logseq/logseq/commit/9b6d09bcfe897e1d1ca5b=
+2100d918382c45d974c" shash=3D"SjrGLlJmGVbm9mWJUy0MGjZwy5fQgsCNqvXTpZeyBQEq3=
+yBBZW2vOSdzkggRniq+Pue7zaD9rdHVf2wxI45PCWIi2vJbwkSwNTJwqVr756GPLS09cMpbHwZf=
+cYsmRK0y24WEP2wvXOekJ4e5vxG3QHLSiGJNs7VMPG5oX52LdwM=3D">9b6d09b</a>  fix: t=
+ests</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F2e=
+b86ba253e9a557322562237b2bbd75efae3c93&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387966307%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Dd5Q0Yf7PAPYp1VXFz7zlo4VRNJXDxIUw5fexn%2FkQ7PQ%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/2eb86ba253e9a557322562237=
+b2bbd75efae3c93" shash=3D"iJBhlaqkLPFuisTzEbq7Uu6QEX8vQpx3fhu9ourAVEP0btdPy=
+7M8TwU3JjN9jEq1U96F2xmIadLUlT9DzYrms0ymbIVc7y14eSBSVnMbIqq+7AlyRWrgrDwEfD9e=
+Fn7FQesHop6CFDzIEgDUJBWGDCeyIwgZJHuHWtVIWOhvKa8=3D">2eb86ba</a>  fix: tests=
+</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Ff6=
+7d47a9db45bcd927358f1c56ba5c7269457061&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387979433%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D2GSPzkAmmkbXzDmImhuq7TzZn23Eehe6icsNlOTNUSg%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/f67d47a9db45bcd927358f1c56b=
+a5c7269457061" shash=3D"U5desKhZtW+iL8zYgETDC52+SJjXfeBosiF5vXMSlByUpfJUr9+=
++K02wDdZ+/sK+M/tSK0MiqXAj6Spub5PAj06B7sITWo9Wdg5mUKT05hPGWzhZYq9fF9Wck002/F=
+AIHhp4ob7EUFJGtPILs4+ULK1nqk5qOJgLE2FxKk7gb5U=3D">f67d47a</a>  fix: tests</=
+li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F3a=
+748c99751a17420be4a5b496f91efcad4f9ed0&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+387992270%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DlhvzXyXtk5up%2BgjNIRCvkfc6SSB%2Feh%2BZ3IRWmuEzqlo%3D&amp;reserved=3D0" o=
+riginalsrc=3D"https://github.com/logseq/logseq/commit/3a748c99751a17420be4a=
+5b496f91efcad4f9ed0" shash=3D"TFX7lXEM9msoAndTyxfcZiHwkItf/iC0dq9O0+Bnen3Yj=
+SKw4waIIy3qi+nok1JGqwWHDL2YjHN/gmYwW4corec6JrkMdVC4A8P4kpHDQuXkT75vgRAcfFf9=
+XhStv3+RLmR7ryUewGveeUikf+rWVw7BpLSbWCaj1/+gnN0v7WE=3D">3a748c9</a>  fix: l=
+int</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F0e=
+c09b6f0a1905efb3b048dcb1081d078cf87bf0&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388013704%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DgeCdNmr%2BbpGCym6nmthOtJyUgDVs8A%2FWssOIKQfNZLc%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/0ec09b6f0a1905efb3b048d=
+cb1081d078cf87bf0" shash=3D"tG1+6U5uCZqjX0S4g91zzPF5NRW9jFAlnNvwh8zSv0Vya8F=
+0ado7Sy9riUC7YiFatSwgyjuzmPC4vGPHsGcds9rmRNzOY3HtfmKfiSl9biYNs8b2Wg1ivD3O/F=
+hckCJOINkv8vLHOPHjYLfi0CTdNeJ19SyZ5RuTudiZughdIPY=3D">0ec09b6</a>  fix: all=
+ow #Journal, #Tag, #Property to be shown for tags property</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Ff5=
+8f83eb38a33f050847d512af273108309e9e0b&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388028677%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DcRmLTknVf8LirUA3Gat81Koww0xRxK8czkATuKCBjC4%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/f58f83eb38a33f050847d512af2=
+73108309e9e0b" shash=3D"zF/3x+V/0qvs+UjEB8q8j0RaXZTk45yq/4CcqwnRSKmfMXtJoW7=
+l5x5tWQacJjf0D59l6nJ3t7yIGepBm4DeLTVaFpKkh8DOaOIgfChX13CB9K6RyIZYD7h/GZykBg=
+vNBTpNjmSfvS3+Efi2YNB/cpIDRYtg5L5V6gqtG0EeVBc=3D">f58f83e</a>  fix: more im=
+ported properties and tags</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F3d=
+ff9e26c0f80b497d8a4f879a7612d6a11a2e5c&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388042361%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DtL5t%2BhgfQWhgp%2FWdZx12kvECOylMJKWv%2F5RDv9%2FePQo%3D&amp;reserved=3D0"=
+ originalsrc=3D"https://github.com/logseq/logseq/commit/3dff9e26c0f80b497d8=
+a4f879a7612d6a11a2e5c" shash=3D"HoAPUalitjwVmN/dbTdnJn+6SZnrNSCoNdDSEFJ5pwW=
+NK8tTJrNut+32JicWD7Z4nzA+OwyB34u04+kRxfrF3/RfItEFTx1avQfYzmCPdNDUyXqUPUjtcK=
+KrOoUg5Zo0OiiAkowMYZOBTNwN4Cb/OJh9w4QsczHAV+upDj/SOjY=3D">3dff9e2</a>  fix:=
+ aliasing of namespaced pages broken</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fa4=
+2d4a8f7d07b1e62d652b70fbb4c0a82a5892a4&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388056497%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DUTrxxMgM0W7j6SaNxgIMeQUHa6X86hXFvCxEnCHQctA%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/a42d4a8f7d07b1e62d652b70fbb=
+4c0a82a5892a4" shash=3D"Q5ZRg64UE+K1mw47mnalJzNwXn0+/oMIAlB31bg/1WejxMtHZt4=
+XnxL0yhmXyQ5A1GdRGxQ80nLh71qlPGKBjC+7TcdRb2PedFMJ0/rJzvQKIunwcvDE1uP4dCwBUT=
+ypkUexCVM/Q4bzvRX+yT4UgUcnsTaT6LW3KKoBMJ061pg=3D">a42d4a8</a>  fix: can't c=
+reate an Asset from the Asset page</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F06=
+f31d2b00e09adeb0b4c85292b5feb2be7051a8&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388070070%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DcI69nsSbrb89%2BBvkv1gpesSbFa4llUZXzusUO8h%2Fu2Q%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/06f31d2b00e09adeb0b4c85=
+292b5feb2be7051a8" shash=3D"umNkJ3bTsBPKwCHbXR1nXll5jdTcRbw2tYcWgZ6ETpYCiSY=
+Whd2QKUb5bnyPJB0ck/mmEXl+gTwZHkf4tshnN6GWajkeYjHmBpou0WFuDj6u6grM757L1oPRO2=
+6bA5FIGrnGHwqEDoce4KQiLI05ijnchZM8igz9rAWQwk2r1bw=3D">06f31d2</a>  fix: dis=
+able setting parent for built-in pages</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Ff1=
+430e2791c8eb908bc8d810ff049330df980079&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388084074%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D2Kb%2BWxIIUHCQEA0bLHyiAkoqgyOwM2LKklXNbXmJN94%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/f1430e2791c8eb908bc8d810f=
+f049330df980079" shash=3D"c8OZKdATrNJY0cHZLiS1zfDAJ1Z/6x9YwS+E7SvA7AvFTK74w=
+Qe73LbU5qjYGMlXnRfCaKK0rkk4EUXvch8r5gLS/4yrTW9bp1yrEj7Z/k6qSsshVO0E2VEaJBO7=
+xnf5k3ap6poFYzf8L1ol1G6VkI0VlawnYhphtZYGAniRegk=3D">f1430e2</a>  fix(regres=
+sion): Tagged nodes can't be collapsed</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F02=
+888b9e6ff8331a806cb7a43e60593945630515&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388097906%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DW0hN%2B%2B98yYLKCmRBjizsotv9vZwQe14RO3F6%2B4dvdMs%3D&amp;reserved=3D0" o=
+riginalsrc=3D"https://github.com/logseq/logseq/commit/02888b9e6ff8331a806cb=
+7a43e60593945630515" shash=3D"JJEzaSNOjYL4KCSwqkg1XOtjGb98MnodS8AYQpAQBjsHP=
+szUi5vUM3aBNgPJxOWuqYARfubq4dBP1U6nB7MRzSDdxf52J17KGs6xJ/r4JFEYRLmzN7fR6sPw=
+qlxlLuxB+jJZssr5CL3UKfEyZf+a3iRvIlaMJvD2WSYSW5AytqE=3D">02888b9</a>  enhanc=
+e(ux): allow view title to be collapsed</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F63=
+191e40af4e3f7a26c272c5c4375a2f4c150d5b&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388111432%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DQmncUCj8JP8fAVMWY4SZCnTDLr%2BovXnWp0OWsCSGrgo%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/63191e40af4e3f7a26c272c5c=
+4375a2f4c150d5b" shash=3D"cjGVzkbpmfZkttXmef9GcmFMgjvUsb6COKVPa/gl+RKoZTail=
+HZMKQQLiWvUUsCSAkmxhjM2lRm+Evs9tXOy8TxyWJKryJDr6dy0cAv+NWXpViyfwqQNIA6be7XM=
+VFd2NQg9oazaVdTd3C/D095dhOMcTDXI3P2/t5axOSZWKw0=3D">63191e4</a>  fix: style=
+</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F8e=
+0afa80455777ecca95b798f33a84889def5e9d&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388127335%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DTJSJSV6mYbAOs9MXNoPmmbC7lH7Xj%2BNY9D17%2BIKeASE%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/8e0afa80455777ecca95b79=
+8f33a84889def5e9d" shash=3D"gh99jxJzgGRJdnkQoESHgKMmcCFjEFXdGt/56lAtqkJla5o=
+eJiPgEF8ug7pHo1N5bJeKvi9Sk7YJB1Cj3FZbtczv2V0V4/x00nn8KqeyYHQrCDtfVUzPx7dtH4=
+In22SyhLZZDkC+qkn0q3T0DnjC1EWiOALQnCMHxiegqnGHmHc=3D">8e0afa8</a>  fix: lin=
+t</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F95=
+3d9e39cf6b1f3851a282ea4d70b36856c3d579&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388140904%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DMV7djDAQwIqchXo9qVAstro8DAB5CSKv%2F6uTQ%2BDHXco%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/953d9e39cf6b1f3851a282e=
+a4d70b36856c3d579" shash=3D"TIrh5cCagy7jEH2cj747uqY9mqkbzmNzpOAIVw/zRfx3gU5=
+uBRkZr9RW5S99v+nytpyDkKXTIEYe2qHNXB6OrRp22AoyROzuJKiBAZJrAxZBAoAJ0UBZINSjKI=
+u20dI2AFLqCEHPvdvdA7xji/YY6wsfSIcelcLV+Nu3w+HH84A=3D">953d9e3</a>  fix: use=
+rs can't change parent property of built in classes</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fd6=
+24d5e7db26b91b9298398407a93c56791ded78&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388156814%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D%2F2%2FT7Z5mnQBZd9Pi1683SX9D9ck0MBeLacCpgjzywVk%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/d624d5e7db26b91b9298398=
+407a93c56791ded78" shash=3D"sKw7mSsYEVLPATScG+wDPzO+mxLcGDvek12/ayVEKBevbXH=
+VdbMB/mq9qf7zkJRLsec6eUltRRtmgc8y50oQTxWQsmB+qVuKk2B/7AADtVy6/DmmwesWLLH7N/=
+GrZVnsZ64JiBTI2+g4qmWN9rLQ/pp1kg1qBRQ/FNEESv9XQHs=3D">d624d5e</a>  fix: use=
+rs cant change tags of built-in classes like Tag</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F4d=
+c07f275b11aaaeca9426020d5cd67ea15cfed8&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388171724%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DFsmGzkcrOzbqD56GQAyXPjBBJCecu7a%2FaPel0gaPv48%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/4dc07f275b11aaaeca9426020=
+d5cd67ea15cfed8" shash=3D"aIMa/6AKHg/aifmBWKKZvhyb2ZLIdd0Rb7f6Dej3QYrE7J7Rz=
+R1Nd5gVchLVHTWFnJB+hZhMQ8+1jtOthkcsx7Fgj0jR5S90OsAl3agWa3WLh/dk/sdZ1ugIGgr0=
+Vc87/uO6tiwbs4R1ydl4L9Z8XSyYOwciA9OTMuMMegIKopY=3D">4dc07f2</a>  fix: creat=
+ing views page for file graphs</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F8c=
+da4758a2df987535930ac004f06fe63c9efc7e&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388185890%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DabkcK41ofjPw9Fs2bhGYs44NwZibjUtxMz6nOKq28K8%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/8cda4758a2df987535930ac004f=
+06fe63c9efc7e" shash=3D"ODifYU3bpmVZ7zG9Cv0l1WrnxC0o/+9kI68y2eZNydsgShkGHxQ=
+ph+SkADW8LQWPVZz7has5arF9fhMFyoKd1uay+lI18yVR0QiqFjT7aWP3X3p+n7ZAWZkJl8PWEb=
+IwCFR85bghDS4UXOKkZ/rnbTJD/1AqvPwIUJ3y658QCug=3D">8cda475</a>  fix: built-i=
+n tags modified when tagging node ref</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F26=
+430eb2ca2d3708360b86efa277365d3ccbf60c&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388201615%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DPC5rz65si97Cftgn3JjYgxOsq7p7b1nYJcFDxPBrHPo%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/26430eb2ca2d3708360b86efa27=
+7365d3ccbf60c" shash=3D"GwhH6rqdzZqN691SQJrrYlI3p9Q/6yqzaJOW46xibWEr7XoG1bu=
+bKkfmW0erupKiz58FMEABK380NTC9imdZuQ1X/5S2N7fprTsRIWWb4YOI5plCWV/tig8xPZOCX0=
+ENxkEBL8loWB9mEGqqvJad5dA/+wTbgLEcBxP/Q8fa63I=3D">26430eb</a>  fix: convert=
+ page to class</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Ff0=
+92acb798567839ba5f684cc8dc0304d7850a55&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388214841%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DTTzPadm5cOBRQCHe7EeuRJR%2FQ88HCqntspKOX6mAz2w%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/f092acb798567839ba5f684cc=
+8dc0304d7850a55" shash=3D"J4iJ4IZdhivM9gQaqIyuxa9D6QwLGgJhc1SZz63CA3pemq8l7=
+ASSDMpx+LalxyAoiKyQWhxiKrloy1i8jd8dlxefBOT9y/CbEucOIrhlBU/UhG7N/jgFAg25MIZJ=
+Pfq5EHfpxPN3s5gW5w1QO7zYCgoRMmQSQ4i0aa80r6MDGUo=3D">f092acb</a>  fix: tag c=
+onversion removes extra tag</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F50=
+36b976abaa533318f34e81cce290e8c336f41c&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388228078%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D5by6tx4Nftak%2BRqhKvR%2BsGzIBi%2FULJOi9cWywsPwS10%3D&amp;reserved=3D0" o=
+riginalsrc=3D"https://github.com/logseq/logseq/commit/5036b976abaa533318f34=
+e81cce290e8c336f41c" shash=3D"Fq5JmPgResOhWDZXWEsqclv89liCgqFcf4HL6Mcsg5905=
+bjhifT2qbdRviksCeYo45JG/YMXTssZGaHMn7pAPQWVzCdEZftuPol7kklFK8ok/1dm173DdUHV=
+7Dxbq6058b4tUXzXQFK3VevahGWcczvO+SmPKpVOkzl2wNtPp0Q=3D">5036b97</a>  fix: T=
+ag and Property not storing their parents correctly</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F05=
+a31b7d76103e7293aee7c86b72e17e7e064f4e&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388241402%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DcgVX%2FtO629BPjx6BwJd%2Fz572zxZ81JTACAc3%2BGwb92o%3D&amp;reserved=3D0" o=
+riginalsrc=3D"https://github.com/logseq/logseq/commit/05a31b7d76103e7293aee=
+7c86b72e17e7e064f4e" shash=3D"p4fO7XrTtdeYzjHxZSwPLzltuoML2JrVCCJS9G3FlsuI7=
+3bc20j4AsT+uBwksIQYx92C9EUICbnRlsBeEluP3xI3rAe8XKorZvdPGo29REejT62QyFsD90He=
+dxsCJb9udHNZ/cWeowxk1c6WiNjBtxcvbD/LlGmOLszQ34CeR8A=3D">05a31b7</a>  fix: i=
+mporter had incorrect set of Page based classes</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Ff7=
+2370d21eb6529ff64e0f5c2289b5b68d44bb1e&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388255142%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DwziYIy90SiI3JUEd7dV%2BKI5CbiF1QCzo4nqp30qaKq8%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/f72370d21eb6529ff64e0f5c2=
+289b5b68d44bb1e" shash=3D"v3oeqnEHw0e+72Rnmn17P436G5It6NVHGjPztBCmUPWdXH6mF=
+Grjlzqmjhu/8sUR5neXanazpEam6as3Mo6+y/Kwv0m/zOuWJpGcN2af0hX9CJAjtSg9HHuZ6r+3=
+HpPWUZwebcC7hQw2UsH8O07k4EJEu0/X1EzcR8UI/JTj4Gw=3D">f72370d</a>  fix(regres=
+sion): blocks can't have duplicate content</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fe5=
+1959da0e00acdfb4f664f9ee1a7db5e033088a&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388268265%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Dopndctk6i4MwmYM9NzxnEtoRuiu4Mm8QDAL3qGEVxig%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/e51959da0e00acdfb4f664f9ee1=
+a7db5e033088a" shash=3D"w65vcA99tXm9vD2zzFM4T/yRRqBOQwbkNscpeKxjAXfDk3p97Mb=
+Ui6CxuokPlPHh5aGiQz9QoCVEf95xwrjfbJ2XLHUhmlrxsh2tZKR2/l+fznd5uG6vMnKdgjY5uV=
+1ye4q3SIet7GWMlWvZyGuN3GMfNLGwU7+UVCVCfPz0yzI=3D">e51959d</a>  enhance: mov=
+e tag remove button to the left</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F57=
+d1c60acd98543bb0cf62020fca5b2e9cbfa955&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388281507%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DZL%2BwVPzP%2FBaUBXeQI6IsK8c4GRuC3CQNE30umxtRftM%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/57d1c60acd98543bb0cf620=
+20fca5b2e9cbfa955" shash=3D"KbrsWNNAHCdoSPqYNY2GZv1BUvZCQiS3qGGrpznim/vCUbU=
+80D0JJVHfAFstroDqvzTie6y1FalIrevdNOLai1BNDXF+8I/Kpm9PkhCxaZk3xu0/XQhLTOpzhj=
++DhbaT5DfBKgKuXDsZCdRpbjuMScbz6WkOCEr+UCHIxUlqxqQ=3D">57d1c60</a>  style tw=
+eaks</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F75=
+06936481ea35345a0fff02370ed722a1789f3a&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388294460%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DuNiaQFwYBWxC8ZiagVI8eSpgESMkb0o5B46fDDrN2BA%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/7506936481ea35345a0fff02370=
+ed722a1789f3a" shash=3D"cM3WsnMBT8bCRz1Jy+3wzCoMZ0oiDOMTeOe/GyTxOvdo3wY4BEN=
+5BZVvnmPI/VGoFbtP/zdUZNH0AmGmLdWfnrulmWW8JBInLvfA002nDjGOU8SsIyMaaIw0lwtPs+=
+BHPv/zePh0Wc68eqLLVQ2OmHOCcYqru9dQZnQFNFIrAss=3D">7506936</a>  fix: db migr=
+ation</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fac=
+156c403fbb65cf8c462475dbe8625b80596d66&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388307135%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DmTq58WUKWAswy9bF4SYfp6tg4KEuowC57VT3iu7zYFM%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/ac156c403fbb65cf8c462475dbe=
+8625b80596d66" shash=3D"B8kbNCJoFjXPMWIERbov4HuJ0lrb1VNF1wGlrpknL3u0/pwqf7L=
+rxfSkGlP40New6wYFEt8B/MYbkRBQzepY/+t/SxSBwnhPWkHBOrRM6Y0KweEkr2LOn0php2qFK5=
+RmGSivZc8PnKJcFsSQuMKKUrMlZ2g4iXtGd/zs95sLLlg=3D">ac156c4</a>  enhance(ux):=
+ open properties in sidebar</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fa2=
+3b821cb563dd0b367c15958ad901f849627170&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388322935%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DWyleQUKybItsoxMJtCGy2Lttae7TkmSwFz%2FeSP1FgYI%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/a23b821cb563dd0b367c15958=
+ad901f849627170" shash=3D"bqaHvHWrlxg5xGt7tVNdFibuhwWFdGSXa9lgd7LVSiDmUo71h=
+2dLaZMoT0qCGC3wTCW2kMhKfN88qfV1mLoT6o9BdrxSpMAjjfwxqDwBVPgzEQvpI20Wo7AuDGE2=
+bp+rtgTaLl0gt0UjfOpy3JjDBHPne3OzAqXquoZYsklYtW8=3D">a23b821</a>  fix: lint<=
+/li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Ff3=
+91f19e7b3699aa312701bedefe44d9b16f24b3&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388339106%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DG5u%2Bcc6PVnrQhpbVQ0nhabimEOgDlaKC5E1GwFdvwa8%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/f391f19e7b3699aa312701bed=
+efe44d9b16f24b3" shash=3D"kbdS/3ihNhcL9GQTmXWb3D+5AUSp/gV6p5A0Mb3Rxe/9IfEdV=
+LAxYLB9iulEpQYYcWcGmm2mugjGBDe2kg9/o6XeZz1vGg+l1BWm31teh+B8Qk3r0LuGjwBh2WD2=
+wAfsZxDh9ZbstvsTxyhMRromRbgdV6Hjh22i0t4LdarAGQI=3D">f391f19</a>  fix: logse=
+q.class/Tag did not have a Tag leading to</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F53=
+99278bb6313f59219491b18eea6f4ad77f6797&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388352252%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Dz7t%2Fg1fEwuUr0iuYPorevft95GCyxyRAERvqft2NWXU%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/5399278bb6313f59219491b18=
+eea6f4ad77f6797" shash=3D"y6IcfW5A0djXEIZV7ADZBRox0jCCq7dwuGdYkmvMqIEUTN6dv=
+CCbcHpKXSIQrB1C+gx8bD7mweL/UaqsgZVruYguQnZKhSIYrrHALgtF01r5L919tlkmA+c9XVWr=
+SQbi8U62A0LaouNOwQ7ZWlz5HGdFWl3euGnjOs66zJFLM6g=3D">5399278</a>  fix: page-=
+exists? not returning anything for db graphs</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Ff5=
+e7b2ce837aa35ff6e1e0fc3b255451c302ec6c&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388365495%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DnQS6hQggSg%2BmOEhzT3Xsg5kMMHDTOU1ncju6j4svkvY%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/f5e7b2ce837aa35ff6e1e0fc3=
+b255451c302ec6c" shash=3D"cX6Jk9bcOREkltrlhJc01s36KgaiiawJD105cX7DQMMMtyvNG=
+qOGgCXmuk4On2b2MWXMtkVWbdo9v27P8Vw2pWwDlMrbA0ebSGbPQLAI+MLj6B9tOCbSuoC6w8a7=
+YSHgUtkmudcn0avf/ujN4rqKzqiMqqxfStF+AGhFN6vpQ2Q=3D">f5e7b2c</a>  fix(regres=
+sion): skipping validation on journal creation</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Ffb=
+2340c1a1d7552433793dd1cc50558fcd071343&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388378543%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DHfYAJ6RO0mMMQcmLLhWXhsELO%2BZqmJBkgsGhiuzD64A%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/fb2340c1a1d7552433793dd1c=
+c50558fcd071343" shash=3D"nB/SHQZSRwAEssKU7ubxUeYZrMejSUnw5SZlb/fO6ZCYAtvcs=
+aYXVp/+pPNht2XTGpdVOE7jMQT17OsPFkr7F2tFGUBWcECQHTnZD5FIqNWHzupaZySMNQqz7H/M=
+ZNfDz3bPlJSVV1/GmF6iIPGcI1CBBosc355vjPNMVXomzUs=3D">fb2340c</a>  fix: new j=
+ournals should only have #Journal</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F7b=
+885a55ded43025ca9ab8431948ad54e6bad22e&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388392131%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Dn6OIpKv%2Fy%2BXecfLFVSuRtlRBupsfV7974W1U%2Bv42LcU%3D&amp;reserved=3D0" o=
+riginalsrc=3D"https://github.com/logseq/logseq/commit/7b885a55ded43025ca9ab=
+8431948ad54e6bad22e" shash=3D"Zmx1gDolb9/otRvgIi31cioPRr/zuDJ0lXKwh7RGjgNh0=
+Y6UDPmhmdxK1uzmI9U5MjQ5gJ1qkrIvdDMTP9nMeKb3j+zTIZRc/r7m2Ycsu3spgbk+e/nLIGcL=
+rBBH87JdAacUNVUG2oAHio+RDgzXmMKN4KvCz6k/qJDpgEbzNVA=3D">7b885a5</a>  fix(re=
+gression): tagging a block with a page or property</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fbc=
+0f63694a75bf02addd020cfd765013c2bbe5fd&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388405055%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DcrTiz%2BbONrQ6pkTmt3Pmdu6Zpt3%2BHHJTmv8vdEPh0%2BQ%3D&amp;reserved=3D0" o=
+riginalsrc=3D"https://github.com/logseq/logseq/commit/bc0f63694a75bf02addd0=
+20cfd765013c2bbe5fd" shash=3D"ITaemwpLvPx4D5G0SxP0/mS1DcectGZG2gLyh8O+0JP71=
+6NnEXKwjlWLWo+gayAJJRMKrzxsD02OsIEKF0fQaYqcgVE0V5wiHu4CR7OKuRyrvslKwBDrAUhx=
+/6Nm0laC8Ho+x6MyTEnEazbaPuVDXzOMlNR7hOeNIuqEGE2poz8=3D">bc0f636</a>  fix: D=
+on't show 'New page' in page autocompletion for</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fad=
+485875fec695db509a0dd55f76a7a9b5bbc07a&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388418381%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Dph48yygMx%2B7VjG7%2Bfukr%2F6n9me69HlbC0RFBraC78I4%3D&amp;reserved=3D0" o=
+riginalsrc=3D"https://github.com/logseq/logseq/commit/ad485875fec695db509a0=
+dd55f76a7a9b5bbc07a" shash=3D"baTmiZXNhmq4hzthPc7TAJI3/wINAYmcNQuqTKP00dCMl=
+oRTkz/O5xg7xD5A96dJAUey5pBTyBdTH8mEes1x9cPkiVE1JdJu3nAKaubAcKn1tTrcLSPadekM=
+rcfbxJPX3YY/7m3zSmMMZUspGQnU3auJQcuWq/vKSxfbVpQyILQ=3D">ad48587</a>  fix(de=
+v): update debug edn of schema.org graph</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fca=
+fa70f4092fa2c9481a6797d3d6d78942a84908&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388434359%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DWM4gaNL9IFW1GIc74KuQi577meEiTTkWkebOyHZ1NZE%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/cafa70f4092fa2c9481a6797d3d=
+6d78942a84908" shash=3D"F2gfXHITDNTOG9kzX/iF0zJvR3ZSRV7rugOVEuWkxBm9EyL5GiY=
+d0ckSYq7W9aK1+Pf3qcx6aKDeD+GbxFCPEPpFFpD1jRccA4VmaLxAAzmGbRY89pzUXPsFGnekcd=
+7ACaKpl3KZnuYejeHh7vNdgAVQfBVK5jv6OBTJkDtbJX8=3D">cafa70f</a>  enhance: pro=
+perties, tags and other core tags can be queried</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F48=
+975198157e57f8ea33f89d4ea0c429af240d61&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388448096%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3Ds%2Bo%2BIsYXTl49NuKoXR7UbMhuM1QpL6%2F9bz8yMpXrWsc%3D&amp;reserved=3D0" o=
+riginalsrc=3D"https://github.com/logseq/logseq/commit/48975198157e57f8ea33f=
+89d4ea0c429af240d61" shash=3D"fhPzQ07NMV/22qH73iqFY0z5hQVxhcXsXhcBQy3HY8qZL=
+9zEpRf2L/Mi1lBThZiADD1wwDOB4tD/rUCy/DEG1Fq6NRGPJ/KKrHIvH1QeJ/E8FZzb2gx+JX3p=
+C2NAR8KHp4iGuuYa9rlpnCUeiEqInLOwwwmAeag8rNSarlCY2Xc=3D">4897519</a>  fix: r=
+emove unused core schema attrs</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fde=
+339cb6f7f5576339462d91ceac4030944d75b3&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388461030%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DDuuUmbEt4d8upgKMD4WzhLREqPw5bRpCfrmfasnv9bg%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/de339cb6f7f5576339462d91cea=
+c4030944d75b3" shash=3D"HRymlFdZu5FPt2iQCURaj7r4ORY0E261lbXXOka4NebY24rM2Vi=
+yknZx1qkDbXvWJVRp9tbpOcY4NjtIkLnknaVhv8zbS0JrbaHqZeAUbHM0G5Z1HXrr88PxUMXGId=
+67lCk6x87kjSQ8pN94ayFL0QnfEWFTQVJ/yX7dO+ZBzYY=3D">de339cb</a>  fix(regressi=
+on): file graphs can see and filter page type on all pages</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F7f=
+c777de96900ba8701a77b149cb9c4cde529567&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388477377%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DjukoV4vW16YANrLvd%2FwAQTq%2BAEh%2BIh3ckYLXGSdCJzg%3D&amp;reserved=3D0" o=
+riginalsrc=3D"https://github.com/logseq/logseq/commit/7fc777de96900ba8701a7=
+7b149cb9c4cde529567" shash=3D"urubAbTg8FkSpGA+KdoKYRORv35L4UsBF1NR88USAzQW7=
+VpUD0MM/k7mnEMl3vBIjxNbZGdrORPyOXsH2T99aWT+L/44rc/bBrG5Znm7d8uILrhm+LifkTwY=
++Vqpt2iulGWLQ07PjeTWgWuG6UamDAfMbYmzTy7pJ5DBonaG4BI=3D">7fc777d</a>  fix: n=
+ew property name allowed invalid characters</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F9d=
+3b5a42bb08a897dc2e960aec391b8cef763035&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388490361%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D7w5oxSow3rzphu0NHeA4m4ejscu8XXdOV5vvCfFoIGk%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/9d3b5a42bb08a897dc2e960aec3=
+91b8cef763035" shash=3D"b22mo84mMNs4ihOyG5afI1McdbO1vxrjhs7awebYPcVx9JlcdEP=
+Ch8VqfDsBLMK3GQYYqXk0XA6R7pEYeK/49qjKt6gSawzhBuCqiLArsLPPneONhURg1r/jz/o1KW=
+x53/QvfQ4xCXbQlOAL8LYswEFLi1AzTAH70W9kItbBHec=3D">9d3b5a4</a>  fix: new pro=
+perty validation and test from previous commit</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fcc=
+53500815a6585d982cdc3bec0c00353f1f3089&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388505271%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DliyIQqtNJx76KfTgO5UGXMCumbWH%2BbKQLOojsvZ59Cs%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/cc53500815a6585d982cdc3be=
+c0c00353f1f3089" shash=3D"ltOcbaLp2dHjUw7zRC1Q249xzRicKAQs+Jcdv4/6J6WCpLOPE=
+oBGFHoWbUoEtNHTz9zlwvxI9gb7RL2AO1iDiTIEq9mZMWECpILluxudZ6yIZwuZlJ5xXSZKXfMY=
+ZQoTVXryY2IidTRrGmiTuufLqjOheTlzjj/0UrOJ7KhWthM=3D">cc53500</a>  fix(regres=
+sion): Properties can't be renamed to a built-in name</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F36=
+38644dab0cc84719866b8f822a9280b691d4b0&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388518595%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DX1SbLMsP1PAfcC7cFX2i3iCNo2uWht97naktZvI%2Fw%2Bs%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/3638644dab0cc84719866b8=
+f822a9280b691d4b0" shash=3D"ItmMIS/t1P594ur40dS/aGpLQxX5NR8dLO3lWvXMvwj01dA=
+ML9m1e0f5Dg/bK5Y6Ut+LTnxLlAX8AnoK4qH5GDPM8EXpFavshGlGIulUmViupA9OQnAv5vRh5m=
+zYDbUrgm3vMxjNKsVAI30dHrLARzC2jHqpIqhcEx713H9A43g=3D">3638644</a>  enhance:=
+ improve :block/tags validation</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fe5=
+b32b16f5020cbe4f7cc5e2efe4b1a9676b6e31&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388531429%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DPp2v2ZBwcsnALRhpX4yjVPYwy%2Fcgoy0bDCnJWpJReQA%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/e5b32b16f5020cbe4f7cc5e2e=
+fe4b1a9676b6e31" shash=3D"RfHiEBTKHFnme7ax/G2ppCm6H9/puDPlAre+pkbuhwn5bfTtT=
+xBMDa8v2OL/71O8Ib6+MQZdUGFK+qqVNCyeOPoQgpoNFTGXsRrsuEYuS+kyc+m8lFpCn75zgi9S=
+diVWzEi2mtiB/kQEjXUzcC+kaU9W9sxxNMqmIhnaeh5At1A=3D">e5b32b1</a>  fix: inval=
+id entity when user class is used as a property</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fc7=
+343b259f838ca421acfa0ace2c7366b1112ec9&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388545181%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DYbCcJi9xbdcGHeeeIPlfupbj4A6BFpnQkAf7aKEditk%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/c7343b259f838ca421acfa0ace2=
+c7366b1112ec9" shash=3D"ed/Q27V60J8YtKvf3JmCWwMiF3LDJEHDlS4XujvbRlgXYeho5g/=
+C3IfJQ+aU0ay/OkGDHyXXuRPCCNZU9H2kcg3eZEUlEtg19u4F0Bb1s/Bu+64DoV2gll2XuIsHFb=
+sBv1K6kD1o6T54M0sehh36lhcWUbF0qroQQKwQXybeesY=3D">c7343b2</a>  fix: tagging=
+ built-in properties and pages</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F9b=
+a95a0beb07fc6b51fa728dc712b4ee933b618c&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388558382%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D8LlIINuP2mLMfmWj9NI7Gf37binovIyW5HBV%2F1vmARk%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/9ba95a0beb07fc6b51fa728dc=
+712b4ee933b618c" shash=3D"iJUaJjsM6Wwx6P8Km9B8m64NVIbh0vgMXapMyaJl/ArgA4j6b=
+FgpNCye25AoKuxDhpjSEwOtyrr4DtlHSFIR+lBQHfgmDzAjEamPunipGMFmSeW7HIwtCIqmqPss=
+IymLnJUUK0SrYQmzdJlKPw51kwXMc3QKDD+svb9cAb3dnzA=3D">9ba95a0</a>  fix: taggi=
+ng with a built-in property causes invalid blocks</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F25=
+99b4576831dc935ec625816fada156a492d76b&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388571668%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D5gwSmLaaY63mFM%2FcW9xJrQxeZo2%2Brq82%2Fg9TudripzE%3D&amp;reserved=3D0" o=
+riginalsrc=3D"https://github.com/logseq/logseq/commit/2599b4576831dc935ec62=
+5816fada156a492d76b" shash=3D"B6bCF1N9ZIpAPf6WlIagVMuzWVQWdPvQX4yJgKOeLl8b6=
+2iQV3I8M4FfQwoSPThGWq70M1GQS7dh2bqpDBXNfVUCLZeRKprCnNl72XT6WSZ3OdDzh6R/NHq6=
+1wBxeom9vHcMM6TEMjv+uxdLH00jGHL9O5UuF7/QczpFGWkt5JM=3D">2599b45</a>  Merge =
+branch 'feat/db' into refactor/tag-as-type</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fb2=
+d6aa495673f28bbc5d635344be03852274d19c&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388585454%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DlJvt2U%2FjtmAz2Cj4aCmxZJF9NzGeDcNHjNogv%2B36qAM%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/b2d6aa495673f28bbc5d635=
+344be03852274d19c" shash=3D"E4uCIUbRFfTP/+DXAlOrF9LgeKnILge7kx5QmxHZto0RDNq=
+jSk8BU7a8mPEFtlkcl3J5Z04Jj8ZOk3rtGb/qEOzj04PUlAgD0+Eox9hPk2YjQq22QkX33PgVWr=
+EazR4eEfzx7W8IcOwfWB3bm9I0vi7GlNbArSbyfsM/5F779OE=3D">b2d6aa4</a>  fix: acc=
+idental temp file from last merge</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fdb=
+b84f0327bccd2054ac281596939b19ed08c746&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388598460%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D%2FfawVXIdk7qrE10Ph1vsBcw3PQ%2Bgso8aotaIDBPD0sw%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://github.com/logseq/logseq/commit/dbb84f0327bccd2054ac281=
+596939b19ed08c746" shash=3D"pkQtWUgs94aXvMgDZ2vF3aMVRMXjeodvLoHM8kihZGVjIts=
+jvkHWtdhLOilenItwqt2F8pCshLuR1lP2fb7LH9SF+XgVRZmvKC4k08JqY2+z4am+7gdPS9Jh4i=
+Pve49x8wjkZYqA1hUezgroR7Yw8DVw1tDwQTTEQ6oheLbaHx0=3D">dbb84f0</a>  Merge br=
+anch 'feat/db' into refactor/tag-as-type</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Fa3=
+f6e074c9a2131775e53077477765479a2da203&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388612322%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DuDVIYI03g8iOQ6uQdetcxZr033T3UJUqWpp8cQdwgvs%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/a3f6e074c9a2131775e53077477=
+765479a2da203" shash=3D"ANQ+MXQ4CwjlaUN/jtFyScTwotfQVEp0GBpIuBwxUIqcZmyugyt=
+ZfOhH1WumKSBRIV4vhhyNTA2MdZ/svxWjpWSlxtFJEmhNINjEgVlBz3cXn0WTCh2/9HMbirpCXf=
+0Mlxf2bhCkQeuuhVbQlyjcMbaRINdAANCaoOgZRhrlNx8=3D">a3f6e07</a>  Merge branch=
+ 'feat/db' into refactor/tag-as-type</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2F48=
+cb4d2f9cd389f4dcc3498f307f0b727609864f&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388628194%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3D9P9s73MFteTDodum7E6F6o8rKLGgEfOydkUU5cfyfgA%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/logseq/logseq/commit/48cb4d2f9cd389f4dcc3498f307=
+f0b727609864f" shash=3D"XfAxmzOs85HAabQQmBP7XYKiwqBifR8/xxZvUNUj0fqEtcY4WrA=
+a2SPSnT1xdfp7jJamB9kO7gGCW9lyxmbrmKdrGork7FyOXYXW3cSq/Z+HiZUwLG4bZ4tThB//ZD=
++gAzcO1QPP/BJQhabLR0QoaqNJIn3vlMjJV28qm1bpVHA=3D">48cb4d2</a>  fix: unresol=
+ved conflict</li>
+  <li><a class=3D"commit-link" href=3D"https://emea01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fcommit%2Ffb=
+efade53111076418598feaa23479b06f3aed50&amp;data=3D05%7C02%7C%7C24ac0393fbce=
+4a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638706312=
+388642092%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwM=
+CIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DU19%2FefXEzrS3jK0v0jiwhzOyhAvZ1NUHAJZQOeXjIxA%3D&amp;reserved=3D0" origi=
+nalsrc=3D"https://github.com/logseq/logseq/commit/fbefade53111076418598feaa=
+23479b06f3aed50" shash=3D"TrholR+86vrZlHf1KEw98ylgTh1ZQcXQ6lys42hPTj6hb+jGM=
+gymn61vGUL9lt6PkeBwIHGIh43/SsNAG3EjyaQsIrWDOLE86KiZvcp5kWSbDG8sEc+TtZhGoTyo=
+UiQvCSEo7885UWmWbKhCgnJWkHEADF5Lgu1/tqoqGVANRUY=3D">fbefade</a>  Merge pull=
+ request #11634 from logseq/refactor/tag-as-type</li>
+</ul>
+
+<p style=3D"font-size:small;-webkit-text-size-adjust:none;color:#666;">=E2=
+=80=94<br><a href=3D"https://emea01.safelinks.protection.outlook.com/?url=
+=3Dhttps%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fpull%2F9858%2Ffiles%2F94d44=
+f0c88aafbbd3bc15bd4d9b8636e7555438e..fbefade53111076418598feaa23479b06f3aed=
+50&amp;data=3D05%7C02%7C%7C24ac0393fbce4a1025be08dd2401d07e%7C84df9e7fe9f64=
+0afb435aaaaaaaaaaaa%7C1%7C0%7C638706312388656088%7CUnknown%7CTWFpbGZsb3d8ey=
+JFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsI=
+ldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=3D%2F3TsQa4slFpfnR1TL13l%2B76YztR7ge=
+COs62z35mqLBQ%3D&amp;reserved=3D0" originalsrc=3D"https://github.com/logseq=
+/logseq/pull/9858/files/94d44f0c88aafbbd3bc15bd4d9b8636e7555438e..fbefade53=
+111076418598feaa23479b06f3aed50" shash=3D"y+UOe8r1bQI9sf0x9l9M0iccuKce9Y4Yx=
+ZfZPEGZgClmKhIhE4E7oVkAvB/qKXRw+1aW276pCJZJ1InrY6IIlCNC+VbOOtDbz0ezFk9DlWQI=
+DVqUjsGJoJxcHhwWWO0ZZvujwxlhlHLuDgaXVumJ9u47RknqizdZQ0VEM7vq06c=3D">View it=
+ on GitHub</a> or <a href=3D"https://emea01.safelinks.protection.outlook.co=
+m/?url=3Dhttps%3A%2F%2Fgithub.com%2Fnotifications%2Funsubscribe-auth%2FA6UZ=
+77TNJHRMOU6F3KHDDHD2HEWEHAVCNFSM6AAAAAA2JXJQ3SVHI2DSMVQWIX3LMV45UAFIKB2WY3C=
+SMVYXKZLTORIHK43IJZXXI2LGNFRWC5DJN5XDWUDVNRWCGMJUGM2DANBSGM3DCQTFMZXXEZJDHE=
+2GINBUMYYGGOBYMFQWMYTCMQZWEYZRGVRGINDEHFRDQNRTGZSTONJVGU2DGODFIFTHIZLSENTGE=
+ZLGMFSGKNJTGEYTCMBXGY2DCOBVHE4GMZLBMEZDGNBXHFRDANTGGNQWKZBVGBIHK43IMVSEC5BD=
+GE3TGNJQGM2DIMBXKB2XG2DFOIRTINZZGE3DS&amp;data=3D05%7C02%7C%7C24ac0393fbce4=
+a1025be08dd2401d07e%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C6387063123=
+89258259%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMC=
+IsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=
+=3DnaYreXE0G6Yrg1tRuVNHnWjXSwfps2DlgOXqwMlS7m8%3D&amp;reserved=3D0" origina=
+lsrc=3D"https://github.com/notifications/unsubscribe-auth/A6UZ77TNJHRMOU6F3=
+KHDDHD2HEWEHAVCNFSM6AAAAAA2JXJQ3SVHI2DSMVQWIX3LMV45UAFIKB2WY3CSMVYXKZLTORIH=
+K43IJZXXI2LGNFRWC5DJN5XDWUDVNRWCGMJUGM2DANBSGM3DCQTFMZXXEZJDHE2GINBUMYYGGOB=
+YMFQWMYTCMQZWEYZRGVRGINDEHFRDQNRTGZSTONJVGU2DGODFIFTHIZLSENTGEZLGMFSGKNJTGE=
+YTCMBXGY2DCOBVHE4GMZLBMEZDGNBXHFRDANTGGNQWKZBVGBIHK43IMVSEC5BDGE3TGNJQGM2DI=
+MBXKB2XG2DFOIRTINZZGE3DS" shash=3D"fTDcXVOr4G6ZjDHt6pOR2YN8RHAiwtJYtEXPGRnT=
+BQFaawvp0P02+jZyj01iuMcqNiq97Qv5gkQi2i/gCNqJNdBStezjnpLqgHfgHqrX4bCLFtyGyGs=
+d7B7a9CaShp/+EmowP/xaT8UFMiH0y+rmzy3IWS23P5pwr6YJCQjlq4s=3D">unsubscribe</a=
+>.<br>You are receiving this because you are subscribed to this thread.<img=
+ src=3D"https://github.com/notifications/beacon/A6UZ77TKJFCWR2UWOPEY3Q32HEW=
+EHA5CNFSM6AAAAAA2JXJQ3SWGG33NNVSW45C7OR4XAZN3KB2WY3CSMVYXKZLTORIHK43IJZXXI2=
+LGNFRWC5DJN5XKUY3PNVWWK3TUL5UWJWQARRIHK3DMEMYTIMZUGA2DEMZWGFBGKZTPOJSSGOJUM=
+Q2DIZRQMM4DQYLBMZRGEZBTMJRTCNLCMQ2GIOLCHA3DGNTFG42TKNJUGM4GKQLGORSXEI3GMJSW=
+MYLEMU2TGMJRGEYDONRUGE4DKOJYMZSWCYJSGM2DOOLCGA3GMM3BMVSDKMCQOVZWQZLEIF2CGMJ=
+XGM2TAMZUGQYDOUDVONUGK4RDGQ3TSMJWHE.gif" height=3D"1" width=3D"1" alt=3D"">=
+<span style=3D"color: transparent; font-size: 0; display: none; visibility:=
+ hidden; overflow: hidden; opacity: 0; width: 0; height: 0; max-width: 0; m=
+ax-height: 0; mso-hide: all">Message ID: <span>&lt;logseq/logseq/pull/9858/=
+before/94d44f0c88aafbbd3bc15bd4d9b8636e7555438e/after/fbefade53111076418598=
+feaa23479b06f3aed50</span><span>@</span><span>github</span><span>.</span><s=
+pan>com&gt;</span></span></p>
+<script type=3D"application/ld+json">[
+{
+"@context": "http://schema.org",
+"@type": "EmailMessage",
+"potentialAction": {
+"@type": "ViewAction",
+"target": "https://github.com/logseq/logseq/pull/9858/files/94d44f0c88aafbb=
+d3bc15bd4d9b8636e7555438e..fbefade53111076418598feaa23479b06f3aed50",
+"url": "https://github.com/logseq/logseq/pull/9858/files/94d44f0c88aafbbd3b=
+c15bd4d9b8636e7555438e..fbefade53111076418598feaa23479b06f3aed50",
+"name": "View Pull Request"
+},
+"description": "View this Pull Request on GitHub",
+"publisher": {
+"@type": "Organization",
+"name": "GitHub",
+"url": "https://github.com"
+}
+}
+]</script>
+
+----==_mimepart_676a8643c36fc_a021fc436cb--

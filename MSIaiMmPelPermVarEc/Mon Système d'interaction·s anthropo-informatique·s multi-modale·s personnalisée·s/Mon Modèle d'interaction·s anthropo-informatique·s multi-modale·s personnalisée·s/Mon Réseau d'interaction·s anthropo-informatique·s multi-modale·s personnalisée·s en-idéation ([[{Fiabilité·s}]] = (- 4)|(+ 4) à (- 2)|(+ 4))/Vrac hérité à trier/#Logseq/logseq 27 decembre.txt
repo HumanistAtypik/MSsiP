@@ -1,0 +1,563 @@
+Courriel du 05/12/2024 :
+
+"Join the Logseq DB alpha tester program
+
+docs‧google.c/om /forms/d/e/1FAIpQLSfe5FBsIELIMDM0hUQvqwMwEH7vt2CFTcNJCCxE4ABm9_9RxQ/viewform
+
+Last year, we started an ambitious project: create a database-driven version of Logseq. And we're getting close to releasing it, but we need a bit of your help.
+
+While storing graphs as Org and Markdown files has worked well for almost 5 years, many of you need better tools to structure your notes—and a more stable experience overall. That's why earlier this year we announced work on "Logseq DB".
+
+In the past two months, we've tested an early version of Logseq DB with a small group of diverse testers. But as the new version is getting more stable, we want to invite more dedicated users (like you) to give us feedback on what we've built so far.
+
+We gather feedback via our Discord server and GitHub repository. To get an invite (and give us your direct feedback), please tell us your Discord username and the email address you use for Logseq Sync (we'll test Sync and Real-Time Collaboration at a later stage, that's why we're asking).
+
+Note: We invite new testers in batches, and it's on "first come, first serve" basis. However, signing up does not guarantee you will get an invite to the alpha test (as we might be ready for a public release before inviting everyone). Once you're added to the tester group, you will receive of notification from the Logseq server on Discord (so make sure you've joined)."
+
+
+
+
+consulte aussi : https://discuss.logseq.com/t/logseq-db-changelog/30013
+
+
+
+github.com/logseq/logseq/pulls
+Releases · logseq/logseq
+
+
+feat: repeated tasks
+
+:type/feature
+
+#11654 opened Dec 22, 2024 by tiensonqin • Draft
+
+feat: new plugins feature: plugins can run binaries
+
+#11646 opened Dec 16, 2024 by brachiGH • Review required
+
+fix: Property 'api' does not exist on type 'LSPluginUser'.
+
+#11645 opened Dec 16, 2024 by brachiGH • Review required
+
+chore(deps): bump nanoid from 3.3.6 to 3.3.8
+
+dependencies
+
+#11641 opened Dec 10, 2024 by dependabot bot • Review required
+
+1
+
+improve-turkish-lang
+
+#11618 opened Nov 24, 2024 by enisozgen • Review required
+
+1
+
+chore(deps): bump cross-spawn from 7.0.3 to 7.0.6 in /libs
+
+dependencies
+
+#11608 opened Nov 19, 2024 by dependabot bot • Review required
+
+1
+
+fixes #10913
+
+#11607 opened Nov 17, 2024 by jramosg • Review required
+
+1
+
+feat: Add a keyboard shortcut for toggling TODO
+
+#11599 opened Nov 8, 2024 by hron • Review required
+
+1 1
+
+Feat: css classes for missing and alias links
+
+#11598 opened Nov 8, 2024 by naught101 • Review required
+
+1
+
+chore(deps): bump dompurify from 2.3.8 to 2.5.4 in /libs
+
+dependencies
+
+#11591 opened Oct 31, 2024 by dependabot bot • Review required
+
+1
+
+ci: add windows arm64 build
+
+#11590 opened Oct 31, 2024 by chawyehsu • Review required
+
+chore(deps): bump elliptic from 6.5.4 to 6.6.0
+
+dependencies
+
+#11588 opened Oct 29, 2024 by dependabot bot • Review required
+
+1
+
+Fix french translation
+
+#11578 opened Oct 25, 2024 by mart-e • Review required
+
+1
+
+add after and before func for the queries
+
+#11558 opened Oct 4, 2024 by scholi • Review required
+
+1
+
+Update Ukranian translation.
+
+:type/hold
+
+#11546 opened Sep 26, 2024 by click0 • Review required
+
+1
+
+feat: Search preview / Enhance Search
+
+#11527 opened Sep 16, 2024 by YU000jp
+
+1
+
+feat: Page outline in sidebar
+
+#11526 opened Sep 16, 2024 by YU000jp
+
+Add favorite button in left menu
+
+#11507 opened Sep 7, 2024 by YU000jp
+
+I modified README.md (added a Chinese switching button) and added READMEcn.md to translate English into Chinese
+
+#11485 opened Aug 25, 2024 by Zhaishis • Review required
+
+1
+
+feat: plugins local browser
+
+#11406 opened Jul 3, 2024 by bugfest • Review required
+
+1 4
+
+fix(editor): invalid page-ref with inline markup
+
+:type/bug-fix :type/hold
+
+#11331 opened May 23, 2024 by andelf • Review required
+
+1 2
+
+enhance(electron): options to disable file watcher
+
+:type/enhancement
+
+#11315 opened May 16, 2024 by andelf • Review required
+
+fix: auto-complete for $ and ^^
+
+:type/hold
+
+#11220 opened Apr 10, 2024 by AyushAgrawal-A2 • Review required
+
+1 2
+
+enhance: Improve rendering of highlights on rotated PDF pages
+
+#11174 opened Mar 28, 2024 by fmos • Review required
+
+2
+
+feat: make published html scripts configurable
+
+feature
+
+#11149 opened Mar 21, 2024 by CNLHC • Changes requested
+
+11
+
+
+
+Alex L — 23/12/2024 20:15
+Hi team, can you tell if a Logseq DB Desktop alpha release will be available soon or in several months from now?
+Ed Nico — 23/12/2024 20:33
+Hi. See post from Ramses 
+
+⁠Welcome new Alpha Testers!⁠
+
+However, we expect that we'll cut offline releases after the holidays when we invite the next wave of testers.
+I think the devs already deem Logseq DB stable enough to start testing the local apps, but as some of them will take time off for the holidays we've decided to first perfect the importer some more before we ask people to test the apps.
+Ramses — 24/12/2024 10:40
+Ed was quicker 🙂 I heard @cldwalker and @tienson mention January to cut the first DB release for testing
+
+
+
+GitHub
+APP
+ — 24/12/2024 01:12
+
+github-actions[bot]
+[logseq/logseq] Issue closed: #11356 Ability to create tables with LaTeX formulas and | character is crippled by non escaping \ character
+GitHub
+APP
+ — 24/12/2024 09:27
+
+xyhp915
+[logseq:enhance/plugin-web] 1 new commit
+720739b enhance(plugin): basic plugin setup for web pla... - xyhp915
+GitHub
+APP
+ — 24/12/2024 10:44
+
+tiensonqin
+[logseq:refactor/tag-as-type] 8 new commits
+f5f8571 refactor: rename :logseq.user/xxx to :logseq.pr... - RCmerci
+61e27aa enhance(ui): polish left sidebar navigations - xyhp915
+dce0cb0 chore(dev): simplify codes - xyhp915
+bdadbeb enhance(ui): polish header icons - xyhp915
+513f52c fix: new and imported graphs invalid b/c of use... - logseq-cldwalker
+
+tiensonqin
+[logseq:refactor/tag-as-type] 1 new commit
+48cb4d2 fix: unresolved conflict - tiensonqin
+
+GitHub
+APP
+ — 24/12/2024 11:00
+
+tiensonqin
+[logseq:feat/db] 109 new commits
+9e10dc1 wip: use :block/tags to represent block types - tiensonqin
+c5fa699 Replace more :block/type - tiensonqin
+c428b87 wip: schema migration - tiensonqin
+4e9d071 fix: migration - tiensonqin
+c7e26a6 fix: schema validate - tiensonqin
+
+tiensonqin
+[logseq:feat/repeated-tasks] 11 new commits
+f5f8571 refactor: rename :logseq.user/xxx to :logseq.pr... - RCmerci
+61e27aa enhance(ui): polish left sidebar navigations - xyhp915
+dce0cb0 chore(dev): simplify codes - xyhp915
+bdadbeb enhance(ui): polish header icons - xyhp915
+513f52c fix: new and imported graphs invalid b/c of use... - logseq-cldwalker
+GitHub
+APP
+ — 24/12/2024 11:21
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+714d61b fix: tests - tiensonqin
+GitHub
+APP
+ — 24/12/2024 11:28
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+9c2e833 fix: lint - tiensonqin
+GitHub
+APP
+ — 24/12/2024 11:38
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+41263ea fix: lint - tiensonqin
+
+tiensonqin
+[logseq] Branch feat/repeated-tasks was force-pushed to b107525
+Compare changes
+GitHub
+APP
+ — 24/12/2024 11:51
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+9e32708 enhance: add 59s delay for overdue - tiensonqin
+GitHub
+APP
+ — 24/12/2024 12:00
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+8865b7c enhance: able to set checkbox mapping state for... - tiensonqin
+GitHub
+APP
+ — 24/12/2024 13:13
+
+xyhp915
+[logseq:enhance/plugin-web] 1 new commit
+90c4d5e enhance(plugin): plugin settings persistence fo... - xyhp915
+GitHub
+APP
+ — 24/12/2024 20:33
+
+mlncn
+[logseq/logseq] Issue opened: #11657 Middle-click paste of selection buffer causes Logseq to freeze for up to half an hour
+Search first
+[X] I searched and no similar issues were found
+
+What Happened?
+Selected the URL from the address bar in Firefox, and pressed the middle mouse button to paste it into a block in a note. Logseq became unusable for about 25 minutes this time, but it has been 15–30 minutes or more other times, middle-click pasting the selection buffer from Zulip and other apps as well as Firefox.
+
+Regular paste does not have this problem.
+
+Reproduce the Bug
+Select the URL from...
+GitHub
+APP
+ — 25/12/2024 02:55
+
+xyhp915
+[logseq:enhance/plugin-web] 110 new commits
+9e10dc1 wip: use :block/tags to represent block types - tiensonqin
+c5fa699 Replace more :block/type - tiensonqin
+c428b87 wip: schema migration - tiensonqin
+4e9d071 fix: migration - tiensonqin
+c7e26a6 fix: schema validate - tiensonqin
+GitHub
+APP
+ — 25/12/2024 04:27
+
+xyhp915
+[logseq:enhance/plugin-web] 1 new commit
+558ac34 fix(plugin): resolve ls dotdir root - xyhp915
+GitHub
+APP
+ — 25/12/2024 08:35
+
+tiensonqin
+[logseq:feat/db] 1 new commit
+60c9b7c fix: demo page crash - tiensonqin
+
+tiensonqin
+[logseq:feat/db] 1 new commit
+bee0e27 fix: tests - tiensonqin
+GitHub
+APP
+ — 25/12/2024 08:47
+
+tiensonqin
+[logseq:feat/db] 1 new commit
+65eed7a fix: db migrate - tiensonqin
+GitHub
+APP
+ — 25/12/2024 09:33
+
+tiensonqin
+[logseq:feat/db] 1 new commit
+a47db0c enhance: display error stack when it's caught b... - tiensonqin
+GitHub
+APP
+ — 25/12/2024 09:43
+
+tiensonqin
+[logseq:feat/db] 1 new commit
+a464999 fix: test - tiensonqin
+GitHub
+APP
+ — 25/12/2024 10:32
+
+xyhp915
+[logseq:enhance/plugin-web] 5 new commits
+60c9b7c fix: demo page crash - tiensonqin
+bee0e27 fix: tests - tiensonqin
+65eed7a fix: db migrate - tiensonqin
+68b8f2d Merge branch 'feat/db' into enhance/plugin-web - xyhp915
+e8732f9 enhance(plugin): WIP install plugin from web - xyhp915
+
+tiensonqin
+[logseq:feat/db] 1 new commit
+0253ae6 enhance: tagged node properties configuration - tiensonqin
+GitHub
+APP
+ — 25/12/2024 11:27
+
+tiensonqin
+[logseq:feat/db] 1 new commit
+b30bc6d enhance: display row id for table view - tiensonqin
+GitHub
+APP
+ — 25/12/2024 12:52
+
+xyhp915
+[logseq:enhance/plugin-web] 1 new commit
+1af1c14 enhance(plugin): WIP install plugin from web - xyhp915
+GitHub
+APP
+ — 25/12/2024 20:04
+
+Programazing
+[logseq/logseq] Issue closed: #11653 Android app not creating blocks
+GitHub
+APP
+ — 25/12/2024 21:27
+
+tiensonqin
+[logseq:feat/db] 1 new commit
+f72ec58 feat: select to delete rows from query result - tiensonqin
+GitHub
+APP
+ — 25/12/2024 22:44
+
+tiensonqin
+[logseq:feat/repeated-tasks] 9 new commits
+60c9b7c fix: demo page crash - tiensonqin
+bee0e27 fix: tests - tiensonqin
+65eed7a fix: db migrate - tiensonqin
+a47db0c enhance: display error stack when it's caught b... - tiensonqin
+a464999 fix: test - tiensonqin
+GitHub
+APP
+ — 25/12/2024 22:54
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+777454e enhance: set default scheduled on property to s... - tiensonqin
+GitHub
+APP
+ — 25/12/2024 23:23
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+780b200 fix: scheduled using local timezone - tiensonqin
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+cb33edd fix: test - tiensonqin
+GitHub
+APP
+ — 25/12/2024 23:36
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+5d9e4b6 enhance: overdue style tweaks - tiensonqin
+GitHub
+APP
+ — Hier à 00:10
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+5efcc0e enhance: enable repeated tasks for :date proper... - tiensonqin
+GitHub
+APP
+ — Hier à 01:12
+
+github-actions[bot]
+[logseq/logseq] Issue closed: #11358 LogSeq doesn't store recent's in some cases
+GitHub
+APP
+ — Hier à 04:26
+
+xyhp915
+[logseq:enhance/plugin-web] 1 new commit
+5c62903 enhance(plugins): persistance strategy for the ... - xyhp915
+
+xyhp915
+[logseq:enhance/plugin-web] 6 new commits
+a47db0c enhance: display error stack when it's caught b... - tiensonqin
+a464999 fix: test - tiensonqin
+0253ae6 enhance: tagged node properties configuration - tiensonqin
+b30bc6d enhance: display row id for table view - tiensonqin
+f72ec58 feat: select to delete rows from query result - tiensonqin
+GitHub
+APP
+ — Hier à 08:34
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+e514e02 bump nbb-logseq - tiensonqin
+GitHub
+APP
+ — Hier à 08:43
+
+xyhp915
+[logseq:enhance/plugin-web] 1 new commit
+d3b68f1 enhance(plugins): simplify state for the instal... - xyhp915
+GitHub
+APP
+ — Hier à 08:55
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+dbcbb65 chore: rename reschedule-property to scheduled-... - tiensonqin
+GitHub
+APP
+ — Hier à 10:52
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+1997099 enhance: add repeat icon before date value - tiensonqin
+GitHub
+APP
+ — Hier à 12:09
+
+RCmerci
+[logseq:feat/db] 1 new commit
+559443e enhance(rtc): support :profile for api-calls - RCmerci
+GitHub
+APP
+ — Hier à 13:43
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+42c3ddc fix: apply overdue style only for scheduled/dea... - tiensonqin
+GitHub
+APP
+ — Hier à 14:13
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+cb72ca8 enhance: improve repeated task condition word - tiensonqin
+GitHub
+APP
+ — Hier à 15:29
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+cdd4ccf refactor: update deadline to :datetime type - tiensonqin
+GitHub
+APP
+ — Hier à 15:38
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+4c5d453 fix: timezone issue - tiensonqin
+GitHub
+APP
+ — Hier à 16:02
+
+tiensonqin
+[logseq:feat/repeated-tasks] 2 new commits
+704ae4d fix: tests - tiensonqin
+dc6b2a5 chore: revert db version to number from epoch - tiensonqin
+GitHub
+APP
+ — Hier à 16:11
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+f888e16 chore: disable deadline tests because CI local ... - tiensonqin
+GitHub
+APP
+ — Hier à 17:47
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+7175b2c fix: keep weekday/month/day for year/month/week... - tiensonqin
+GitHub
+APP
+ — Hier à 18:53
+
+tiensonqin
+[logseq:feat/repeated-tasks] 1 new commit
+59b53c1 fix: wrong refs from datetime properties - tiensonqin
+GitHub
+APP
+ — Aujourd’hui à 01:12
+
+github-actions[bot]
+[logseq/logseq] Issue closed: #10549 Logseq window freezes and gets blank on MacOS
